@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+Body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ff99cc; /* Cor suave para um site de cosméticos */
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Banner promocional */
+.banner-promocional {
+    background-color: #d4549a; /* Cor chamativa */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .banner-promocional h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.banner-promocional p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .banner-promocional .btn {
+    background-color: #ffffff;
+    color: #ff66b2;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .banner-promocional .btn:hover {
+    background-color: #ff3385;
+}
+/* Seção de produtos em destaque */
+.produtos-destaque {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.produtos-destaque h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.produtos-destaque .produto {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.produtos-destaque .produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produtos-destaque .produto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.produtos-destaque .produto p {
+    font-size: 16px;
+    color: #ff66b2;
+}
+
+.produtos-destaque .produto .btn {
+    background-color: #ff66b2;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.produtos-destaque .produto .btn:hover {
+    background-color: #ff3385;
+}
+
+/* Seção de novidades */
+.novidades {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+
+  .novidades .novidade {
+    display: inline-block;
+    width: 200px;  /* Mesma largura dos produtos em destaque */
+    margin: 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .novidades .novidade img {
+    width: 100%;   /* As imagens vão ocupar 100% da largura do contêiner */
+    height: auto;  /* Mantém a proporção da imagem */
+    border-radius: 5px;
+  }
+
+  .novidades .novidade h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .novidades .novidade p {
+    font-size: 16px;
+    color: #ff66b2;
+  }
+  
+  .novidades .novidade .btn {
+    background-color: #ff66b2;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .novidades .novidade .btn:hover {
+    background-color: #ff3385;
+  }
+  
+  .novidades h2 {
+    color:#ff66b2 ;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .novidades ul {
+    list-style: none;
+  }
+  
+  .novidades li {
+    font-size: 18px;
+    margin: 10px 0;
+    
+  }
+  
+  /* Chamada para ação */
+  .call-to-action {
+    background-color:#d4549a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .call-to-action h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .call-to-action p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .call-to-action .btn {
+    background-color: #fff;
+    color: #ff66b2;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .call-to-action .btn:hover {
+    background-color: #ff3385;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer a {
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    
+  }
+
+

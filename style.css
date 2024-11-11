@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #0077cc;
+    background-color: #d4549a;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -41,14 +41,18 @@ header nav ul a {
 }
 
 header nav ul a:hover {
-    color: #ffcc00; 
+     
     text-decoration: underline;
     transform: translateY(-5px);
 }
 
+main section h2 {
+    color: #520447;
+    font-weight: bold;
+}
 
 .banner {
-    background-color: #ffcc00;
+    background-color: #fabef2;
     color: #333;
     text-align: center;
     padding: 20px;
@@ -89,21 +93,23 @@ header nav ul a:hover {
 
 .product p {
     font-size: 1rem;
-    color: #0077cc;
+    color: #520447;
     font-weight: bold;
 }
 
 .product button {
     padding: 10px;
-    background-color: #0077cc;
-    color: #fff;
+    background-color: #fabef2;
+    color: #520447;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    
 }
 
 .product button:hover {
-    background-color: #005fa3;
+    background-color: #f13ed9;
 
 }
 
