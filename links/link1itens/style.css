@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+:root {
+  --cor-primaria: #d4549a; /* Exemplo de cor rosa */
+}
+
 /* Estilos Gerais */
 body {
     font-family: 'Arial', sans-serif;
@@ -9,7 +13,7 @@ body {
   }
   
   header {
-    background-color: #ff66b2;
+    background-color:var(--cor-primaria);
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -19,83 +23,153 @@ body {
     margin: 0;
     font-size: 36px;
   }
-  
-  footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 5px 0;
-    position: fixed;
-    width: 100%;
-    height: 35px;
-    bottom: 0;
-  }
-  
+
+  .btn {
+    position: absolute;  /* Posicionamento absoluto */
+    top: 20px;           /* Distância do topo da tela ou contêiner */
+    left: 20px;          /* Distância da margem esquerda */
+    padding: 10px 20px;  /* Ajuste de padding do botão */
+    background-color: #ff69b4; /* Cor do botão */
+    color: white;        /* Cor do texto */
+    text-decoration: none; /* Retira o sublinhado */
+    border-radius: 5px;  /* Cantos arredondados */
+    font-size: 16px;     /* Tamanho da fonte */
+}
+
   /* Estilo da seção de detalhes */
-  .detalhes-produto {
+  .descriçao-produto {
     display: flex;
-    justify-content: space-around;
-    margin: 30px 10%;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente (caso necessário) */
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 800px; /* Limita a largura no desktop */
+    background-color: #f9f9f9;
     border-radius: 10px;
-  }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza textos */
+}
+  
   
   /* Imagem do produto */
   .produto-imagem {
-    max-width: 400px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Descrição do produto */
-  .descricao {
-    max-width: 600px;
-    padding-left: 20px;
-  }
-  
-  .descricao h2 {
-    color: #ff66b2;
-    font-size: 28px;
+    max-width: 100%;
+    height: 350px;
+    border-radius: 10px;
     margin-bottom: 20px;
+    
   }
   
-  .descricao p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  .descricao ul {
-    margin-top: 20px;
-    padding-left: 20px;
-  }
-  
-  .descricao li {
-    font-size: 16px;
-    color: #666;
+  .detalhes-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todo o conteúdo */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produto-imagem {
+    max-width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.descricao {
+    text-align: center; /* Centraliza os textos */
+    color: #555; /* Cor padrão do texto */
+}
+
+.descricao h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ff69b4; /* Rosa vibrante */
+}
+
+.descricao p,
+.descricao ul {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.descricao h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
-  }
-  
-  .descricao h3 {
-    color: #ff66b2;
-    font-size: 20px;
-    margin-top: 20px;
-  }
-  
-  .descricao .btn {
-    background-color: #ff66b2;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 20px;
+    color: #ff69b4; /* Rosa vibrante */
+}
+
+.descricao ul li strong {
+    color: #ff69b4; /* Destaca partes importantes da lista */
+}
+
+/* Botão de compra */
+.botao-compra {
     display: inline-block;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #fa1f0b; /* Cor chamativa */
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.botao-compra:hover {
+    background-color: #e65b50; /* Tom mais escuro no hover */
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #ff66b2;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
   
-  .descricao .btn:hover {
-    background-color: #ff3385;
+}
+
+
+  
+
+  /* Responsividade */
+@media (max-width: 768px) {
+  .descricao-shampoo {
+      padding: 15px;
   }
+
+  .descricao-shampoo h2 {
+      font-size: 1.5rem;
+  }
+
+  .descricao-shampoo p {
+      font-size: 0.9rem;
+  }
+
+  .descricao-shampoo .botao-compra {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+}

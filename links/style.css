@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+:root {
+  --cor-primaria: #d4549a; /* Exemplo de cor rosa */
+}
+
 * {
   margin: 0;
   padding: 0;
