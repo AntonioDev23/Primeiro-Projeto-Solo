@@ -36,6 +36,15 @@ body {
     font-size: 16px;     /* Tamanho da fonte */
 }
 
+/* Ajuste para telas pequenas (móveis) */
+@media (max-width: 768px) {
+  .btn {
+      padding: 8px 15px;   /* Diminui o espaço interno do botão */
+      font-size: 14px;      /* Ajusta o tamanho da fonte */
+      top: 10px;            /* Ajuste a distância do topo */
+      left: 10px;           /* Ajuste a distância da esquerda */
+  }
+}
   /* Estilo da seção de detalhes */
   .descriçao-produto {
     display: flex;

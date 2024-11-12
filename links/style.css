@@ -52,18 +52,20 @@ header p {
     margin-bottom: 20px;
   }
 
-  .banner-promocional .btn {
+.btn {
     background-color: #ffffff;
     color: #ff66b2;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease;
+    text-align: center;
   }
 
   .banner-promocional .btn:hover {
-    background-color: #ff3385;
+    background-color: #854961;
+    transform: translateY(-5px); 
 }
 /* Seção de produtos em destaque */
 .produtos-destaque {
