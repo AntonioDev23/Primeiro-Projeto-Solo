@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
 :root {
-  --cor-primaria: #d4549a; /* Exemplo de cor rosa */
+  --cor-1: #d4549a; 
+  --cor-2: #ff69b4;
+  --cor-3: #fa1f0b;
+  --cor-4: #666;
+  --cor-5: #520447;
 }
 
 /* Estilos Gerais */
@@ -13,7 +17,7 @@ body {
   }
   
   header {
-    background-color:var(--cor-primaria);
+    background-color:var(--cor-1);
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -26,41 +30,23 @@ body {
 
   .btn {
     position: absolute;  /* Posicionamento absoluto */
-    top: 20px;           /* Distância do topo da tela ou contêiner */
-    left: 20px;          /* Distância da margem esquerda */
-    padding: 10px 20px;  /* Ajuste de padding do botão */
-    background-color: #ff69b4; /* Cor do botão */
-    color: white;        /* Cor do texto */
+    top: 23px;           /* Distância do topo da tela ou contêiner */
+    left: 5px;          /* Distância da margem esquerda */
+    padding: 10px 10px;  /* Ajuste de padding do botão */
+    background-color: white; /* Cor do botão */
+    color: rgb(88, 28, 70);        /* Cor do texto */
     text-decoration: none; /* Retira o sublinhado */
     border-radius: 5px;  /* Cantos arredondados */
-    font-size: 16px;     /* Tamanho da fonte */
-}
+    font-size: 15px;     /* Tamanho da fonte */
+    transition: transform 0.3s ease; 
 
-/* Ajuste para telas pequenas (móveis) */
-@media (max-width: 768px) {
-  .btn {
-      padding: 8px 15px;   /* Diminui o espaço interno do botão */
-      font-size: 14px;      /* Ajusta o tamanho da fonte */
-      top: 10px;            /* Ajuste a distância do topo */
-      left: 10px;           /* Ajuste a distância da esquerda */
   }
-}
-  /* Estilo da seção de detalhes */
-  .descriçao-produto {
-    display: flex;
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente (caso necessário) */
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 800px; /* Limita a largura no desktop */
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centraliza textos */
-}
-  
-  
+
+  .btn:hover {
+    transform: translateY(-5px);
+  }
+
+ 
   /* Imagem do produto */
   .produto-imagem {
     max-width: 100%;
@@ -80,6 +66,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
 }
 
 .produto-imagem {
@@ -103,18 +90,21 @@ body {
 .descricao p,
 .descricao ul {
     font-size: 1rem;
-    line-height: 1.5;
     margin-bottom: 15px;
+    list-style-type: none;
+    line-height: 2.0;
 }
 
 .descricao h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: #ff69b4; /* Rosa vibrante */
+    line-height: 1.8;
 }
 
 .descricao ul li strong {
     color: #ff69b4; /* Destaca partes importantes da lista */
+    line-height: 1.8;
 }
 
 /* Botão de compra */

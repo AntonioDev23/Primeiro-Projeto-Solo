@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
 :root {
-    --cor-primaria: #d4549a; /* Exemplo de cor rosa */
+    --cor-1: #d4549a; 
+    --cor-2: #ff69b4;
+    --cor-3: #fa1f0b;
+    --cor-4: #666;
+    --cor-5: #520447;
   }
 
 * {
@@ -18,7 +22,7 @@ body {
 }
 
 header {
-    background-color: #d4549a;
+    background-color: var(--cor-1);
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -117,10 +121,21 @@ main section h2 {
 
 }
 
+/* Rodapé */
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px 0px;
-    margin-top: 10px;
-}
+    padding: 20px;
+  }
+  
+  footer a {
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    
+  }

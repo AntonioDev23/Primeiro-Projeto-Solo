@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
 :root {
-  --cor-primaria: #d4549a; /* Exemplo de cor rosa */
+  --cor-1: #d4549a; 
+  --cor-2: #ff69b4;
+  --cor-3: #fa1f0b;
+  --cor-4: #666;
+  --cor-5: #520447;
 }
 
 * {
@@ -39,7 +43,7 @@ header p {
     background-color: #d4549a; /* Cor chamativa */
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .banner-promocional h2 {
@@ -62,6 +66,30 @@ header p {
     transition: transform 0.3s ease;
     text-align: center;
   }
+
+  .btn:hover {
+    transform: translateY(-5px);
+
+  }
+
+  .bt {
+    position: absolute;  /* Posicionamento absoluto */
+    top: 23px;           /* Distância do topo da tela ou contêiner */
+    left: 5px;          /* Distância da margem esquerda */
+    padding: 10px 10px;  /* Ajuste de padding do botão */
+    background-color: white; /* Cor do botão */
+    color: rgb(88, 28, 70);        /* Cor do texto */
+    text-decoration: none; /* Retira o sublinhado */
+    border-radius: 5px;  /* Cantos arredondados */
+    font-size: 15px;     /* Tamanho da fonte */
+    transition: transform 0.3s ease; 
+
+  }
+
+  .bt:hover {
+    transform: translateY(-5px);
+  }
+
 
   .banner-promocional .btn:hover {
     background-color: #854961;
@@ -103,7 +131,7 @@ header p {
 
 .produtos-destaque .produto p {
     font-size: 16px;
-    color: #ff66b2;
+    color: var(--cor-5);
 }
 
 .produtos-destaque .produto .btn {
@@ -150,7 +178,7 @@ header p {
   
   .novidades .novidade p {
     font-size: 16px;
-    color: #ff66b2;
+    color:var(--cor-5);
   }
   
   .novidades .novidade .btn {
@@ -167,7 +195,6 @@ header p {
   }
   
   .novidades h2 {
-    color:#ff66b2 ;
     font-size: 28px;
     margin-bottom: 20px;
   }
