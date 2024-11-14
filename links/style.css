@@ -100,9 +100,11 @@ header p {
     padding: 40px 20px;
     text-align: center;
     background-color: #ffffff;
+    color: var(--cor-5);
 }
 
 .produtos-destaque h2 {
+  color: var(--cor-5);
     font-size: 28px;
     margin-bottom: 20px;
 }
@@ -152,6 +154,7 @@ header p {
     padding: 40px 20px;
     background-color: #f8f8f8;
     text-align: center;
+    color: var(--cor-5);
   }
 
   .novidades .novidade {

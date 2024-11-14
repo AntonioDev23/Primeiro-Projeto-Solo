@@ -14,21 +14,21 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-  }
-  
-  header {
+}
+
+header {
     background-color:var(--cor-1);
     color: white;
     text-align: center;
     padding: 20px 0;
-  }
-  
-  header h1 {
+ }
+
+ header h1 {
     margin: 0;
     font-size: 36px;
-  }
+}
 
-  .btn {
+.btn {
     position: absolute;  /* Posicionamento absoluto */
     top: 23px;           /* Distância do topo da tela ou contêiner */
     left: 5px;          /* Distância da margem esquerda */
@@ -39,24 +39,21 @@ body {
     border-radius: 5px;  /* Cantos arredondados */
     font-size: 15px;     /* Tamanho da fonte */
     transition: transform 0.3s ease; 
+}
 
-  }
-
-  .btn:hover {
+.btn:hover {
     transform: translateY(-5px);
-  }
+}
 
- 
-  /* Imagem do produto */
-  .produto-imagem {
+ /* Imagem do produto */
+ .produto-imagem {
     max-width: 100%;
     height: 350px;
     border-radius: 10px;
     margin-bottom: 20px;
-    
-  }
-  
-  .detalhes-produto {
+ }
+
+ .detalhes-produto {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centraliza todo o conteúdo */
@@ -89,7 +86,7 @@ body {
 
 .descricao p,
 .descricao ul {
-    font-size: 1.0rem;
+    font-size: 1rem;
     margin-bottom: 15px;
     list-style-type: none;
     line-height: 2.0;
@@ -133,42 +130,40 @@ body {
 
 /* Rodapé */
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 footer a {
-  color: #ff66b2;
-  text-decoration: none;
-  margin: 0 10px;
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
 footer a:hover {
-  text-decoration: underline;
-  
+    text-decoration: underline;
+    
 }
-
-
-  
 
   /* Responsividade */
-@media (max-width: 768px) {
-  .descricao-shampoo {
-      padding: 15px;
-  }
-
-  .descricao-shampoo h2 {
-      font-size: 1.5rem;
-  }
-
-  .descricao-shampoo p {
-      font-size: 0.9rem;
-  }
-
-  .descricao-shampoo .botao-compra {
-      padding: 8px 16px;
-      font-size: 0.9rem;
-  }
+  @media (max-width: 768px) {
+    .descricao-shampoo {
+        padding: 15px;
+    }
+  
+    .descricao-shampoo h2 {
+        font-size: 1.5rem;
+    }
+  
+    .descricao-shampoo p {
+        font-size: 0.9rem;
+    }
+  
+    .descricao-shampoo .botao-compra {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
+  

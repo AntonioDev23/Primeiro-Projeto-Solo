@@ -9,7 +9,7 @@
   }
 
   /* Estilos Gerais */
-body {
+  body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ body {
     background-color:var(--cor-1);
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0px;
   }
   
   header h1 {
@@ -101,28 +101,27 @@ ul li strong {
 
 /* Botão de compra */
 .botao-compra {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  background-color: #fa1f0b; /* Cor chamativa */
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #fa1f0b; /* Cor chamativa */
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 .botao-compra:hover {
-  background-color: #e65b50; /* Tom mais escuro no hover */
-  transform: scale(1.05); /* Efeito de zoom */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    background-color: #e65b50; /* Tom mais escuro no hover */
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
-
 
 /* Rodapé */
 footer {
