@@ -78,7 +78,7 @@ body {
 
 .descricao {
     text-align: center; /* Centraliza os textos */
-    color: #555; /* Cor padrão do texto */
+    color: var(--cor-5); /* Cor padrão do texto */
 }
 
 .descricao h2 {

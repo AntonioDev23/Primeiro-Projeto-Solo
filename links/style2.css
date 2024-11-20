@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+:root {
+  --cor-1: #d4549a; 
+  --cor-2: #ff69b4;
+  --cor-3: #fa1f0b;
+  --cor-4: #666;
+  --cor-5: #520447;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color:var(--cor-1);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.btn {
+  position: absolute;  /* Posicionamento absoluto */
+  top: 23px;           /* Distância do topo da tela ou contêiner */
+  left: 5px;          /* Distância da margem esquerda */
+  padding: 10px 10px;  /* Ajuste de padding do botão */
+  background-color: white; /* Cor do botão */
+  color: rgb(88, 28, 70);        /* Cor do texto */
+  text-decoration: none; /* Retira o sublinhado */
+  border-radius: 5px;  /* Cantos arredondados */
+  font-size: 15px;     /* Tamanho da fonte */
+  transition: transform 0.3s ease; 
+
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Imagem do produto */
+.produto-imagem {
+  max-width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  
+}
+
+.detalhes-produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza todo o conteúdo */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.produto-imagem {
+  max-width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.descricao {
+  text-align: center; /* Centraliza os textos */
+  color: var(--cor-5); /* Cor padrão do texto */
+  border-radius: 5px;
+}
+
+
+.descricao h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ff69b4; /* Rosa vibrante */
+  text-decoration: underline;
+}
+
+.descricao h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff69b4; /* Rosa vibrante */
+  line-height: 1.8;
+  text-align: justify;
+  text-align: center;
+ 
+
+}
+
+.descricao p,
+.descricao ul {
+  font-size: 1.0rem;
+  margin-bottom: 15px;
+  list-style-type: none;
+  line-height: 2.3;
+  text-align: justify;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+
+}
+
+.descricao ul li strong {
+  color: #ff69b4; /* Destaca partes importantes da lista */
+  line-height: 1.8;
+  text-align: justify;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  
+}
+
+
+/* Botão de compra */
+.botao-compra {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #fa1f0b; /* Cor chamativa */
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.botao-compra:hover {
+  background-color: #e65b50; /* Tom mais escuro no hover */
+  transform: scale(1.05); /* Efeito de zoom */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Rodapé */
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+footer a {
+color: #ff66b2;
+text-decoration: none;
+margin: 0 10px;
+}
+
+footer a:hover {
+text-decoration: underline;
+
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+.descricao-shampoo {
+    padding: 15px;
+}
+
+.descricao-shampoo h2 {
+    font-size: 1.5rem;
+}
+
+.descricao-shampoo p {
+    font-size: 0.9rem;
+}
+
+.descricao-shampoo .botao-compra {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+}

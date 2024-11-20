@@ -70,7 +70,7 @@
 .descricao {
     max-width: 600px;
     text-align: center;
-    color: #333;
+    color: var(--cor-5);
 }
 
 /* Títulos e descrições */
@@ -83,8 +83,9 @@ p, ul {
     font-family: 'Arial', sans-serif;
     font-size: 1.0rem;
     line-height: 2.0;
-    color: #666;
+    color: var(--cor-5);
     list-style-type: none;
+    
 
 }
 
