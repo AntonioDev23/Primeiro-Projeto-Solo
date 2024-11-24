@@ -30,14 +30,15 @@ body {
 
   .btn {
     position: absolute;  /* Posicionamento absoluto */
-    top: 20px;           /* Distância do topo da tela ou contêiner */
+    top: 10px;           /* Distância do topo da tela ou contêiner */
     left: 5px;          /* Distância da margem esquerda */
-    padding: 10px 10px;  /* Ajuste de padding do botão */
+    padding: 5px 5px;  /* Ajuste de padding do botão */
     background-color: white; /* Cor do botão */
     color: rgb(88, 28, 70);        /* Cor do texto */
     text-decoration: none; /* Retira o sublinhado */
     border-radius: 5px;  /* Cantos arredondados */
-    font-size: 15px;     /* Tamanho da fonte */
+    font-size: 9px; 
+    font-weight: bolder;    /* Tamanho da fonte */
     transition: transform 0.3s ease; 
 
   }

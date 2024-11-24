@@ -97,6 +97,7 @@ main section h2 {
 .product h3 {
     margin: 10px 0px;
     font-size:  1.2em;
+    color: var(--cor-5);
 }
 
 .product p {
@@ -107,8 +108,8 @@ main section h2 {
 
 .product button {
     padding: 10px;
-    background-color: #fabef2;
-    color: #520447;
+    background-color: var(--cor-2);
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -117,7 +118,7 @@ main section h2 {
 }
 
 .product button:hover {
-    background-color: #f13ed9;
+    background-color: var(--cor-5);
 
 }
 

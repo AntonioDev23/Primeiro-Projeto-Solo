@@ -93,7 +93,7 @@ header h1 {
 }
 
 .descricao h3 {
-  font-size: 1.0rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
   color: #ff69b4; /* Rosa vibrante */
   line-height: 1.8;
@@ -102,19 +102,19 @@ header h1 {
  }
 
  section div p {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  padding: 5px;
  }
 
 .descricao, .descricao ul {
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   margin-bottom: 15px;
   list-style-type: none;
-  line-height: 2.3;
+  line-height: 1.7;
   text-align: justify;
   text-align: center;
   padding: 10px;
-  font-weight: bold;
-
+  
 }
 
 .descricao ul li strong {
