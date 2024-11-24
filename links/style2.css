@@ -36,14 +36,15 @@ header h1 {
 
 .btn {
   position: absolute;  /* Posicionamento absoluto */
-  top: 23px;           /* Distância do topo da tela ou contêiner */
+  top: 10px;           /* Distância do topo da tela ou contêiner */
   left: 5px;          /* Distância da margem esquerda */
-  padding: 10px 10px;  /* Ajuste de padding do botão */
+  padding: 5px 5px;  /* Ajuste de padding do botão */
   background-color: white; /* Cor do botão */
   color: rgb(88, 28, 70);        /* Cor do texto */
   text-decoration: none; /* Retira o sublinhado */
   border-radius: 5px;  /* Cantos arredondados */
-  font-size: 15px;     /* Tamanho da fonte */
+  font-size: 9px; 
+  font-weight: bolder;    /* Tamanho da fonte */
   transition: transform 0.3s ease; 
 
 }
@@ -56,7 +57,7 @@ header h1 {
 /* Imagem do produto */
 .produto-imagem {
   max-width: 100%;
-  height: 350px;
+  height: 320px;
   border-radius: 10px;
   margin-bottom: 20px;
   
@@ -75,41 +76,37 @@ header h1 {
   line-height: 1.8;
 }
 
-.produto-imagem {
-  max-width: 100%;
-  height: 350px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+
 
 .descricao {
   text-align: center; /* Centraliza os textos */
   color: var(--cor-5); /* Cor padrão do texto */
   border-radius: 5px;
+  
 }
 
-
 .descricao h2 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin-bottom: 15px;
   color: #ff69b4; /* Rosa vibrante */
   text-decoration: underline;
 }
 
 .descricao h3 {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   margin-bottom: 10px;
   color: #ff69b4; /* Rosa vibrante */
   line-height: 1.8;
   text-align: justify;
   text-align: center;
- 
+ }
 
-}
+ section div p {
+  font-size: 0.9rem;
+ }
 
-.descricao p,
-.descricao ul {
-  font-size: 1.0rem;
+.descricao, .descricao ul {
+  font-size: 0.8rem;
   margin-bottom: 15px;
   list-style-type: none;
   line-height: 2.3;
