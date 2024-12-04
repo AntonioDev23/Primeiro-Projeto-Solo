@@ -20,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  
 }
 
 header {
@@ -32,6 +33,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 30px;
+  
 }
 
 .btn {
@@ -55,85 +57,98 @@ header h1 {
 
 
 /* Imagem do produto */
-.produto-imagem {
+section img {
   max-width: 100%;
   height: 320px;
   border-radius: 10px;
   margin-bottom: 20px;
+  display: block; /* Remove comportamento inline padrão da imagem */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  margin-top: 10px;
+  margin-bottom: 10px;
   
 }
 
-.detalhes-produto {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza todo o conteúdo */
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 0 auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  line-height: 1.8;
-}
-
-
-
-.descricao {
-  text-align: center; /* Centraliza os textos */
-  color: var(--cor-5); /* Cor padrão do texto */
-  border-radius: 5px;
-  
-}
-
-.descricao h2 {
+section h2, h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #ff69b4; /* Rosa vibrante */
+  color: var(--cor-5); /* Rosa vibrante */
   text-decoration: underline;
+  text-align: center;
 }
 
-.descricao h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #ff69b4; /* Rosa vibrante */
-  line-height: 1.8;
-  text-align: justify;
-  text-align: center;
- }
-
- section div p {
-  font-size: 1.2rem;
-  padding: 5px;
- }
-
-.descricao, .descricao ul {
+section strong {
   font-size: 1.0rem;
   margin-bottom: 15px;
-  list-style-type: none;
-  line-height: 1.7;
-  text-align: justify;
-  text-align: center;
-  padding: 10px;
+  color: var(--cor-2); /* Rosa vibrante */
+  text-decoration: underline;
   
 }
 
-.descricao ul li strong {
-  color: #ff69b4; /* Destaca partes importantes da lista */
-  line-height: 1.8;
-  text-align: justify;
+section > div > p {
   text-align: center;
+  font-size: 15px;
+  font-weight: bolder;
+  color: var(--cor-4);
+}
+
+.titulo {
+  width: 500px;
+  height: 450px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
   padding: 10px;
-  font-weight: bold;
+  margin-top: 5px;
+}
+
+.kit-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Itens em colunas flexíveis */
+  gap: 20px; /* Espaço entre as colunas */
+  margin: 20px auto; /* Centraliza a grade */
+  max-width: 1200px; /* Limita a largura total */
   
 }
 
+.item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--cor-3); /* Cor temática */
+}
+
+.item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.container-botao {
+  display: flex; /* Flexbox para centralizar */
+  justify-content: center; /* Centraliza o botão horizontalmente */
+  align-items: center; /* Alinha o conteúdo verticalmente, se necessário */
+  width: 100%; /* Certifique-se de que o contêiner ocupe 100% da largura disponível */
+  margin-top: 20px; /* Distância do topo, você pode ajustar conforme necessário */
+}
 
 /* Botão de compra */
-.botao-compra {
-  display: inline-block;
+.container-botao {
+  display: flex;
+  justify-content: center; /* Isso vai garantir que o botão seja centralizado */
   margin-top: 20px;
+}
+
+.botao-compra {
   padding: 15px 30px;
-  background-color: #fa1f0b; /* Cor chamativa */
+  background-color: #fa1f0b;
   color: white;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -142,14 +157,9 @@ header h1 {
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   text-decoration: none;
-}
-
-.botao-compra:hover {
-  background-color: #e65b50; /* Tom mais escuro no hover */
-  transform: scale(1.05); /* Efeito de zoom */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Rodapé */
