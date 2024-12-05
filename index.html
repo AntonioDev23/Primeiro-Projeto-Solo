@@ -6,17 +6,24 @@
     <title>ARSN</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">
             <h1>ARSN LOJA VIRTUAL</h1>
         </div>
-        <nav >
-            <ul>
-                <a href="links/Produtos.html" target="_blank"><li>PRODUTOS</li></a>
-                <a href=""><li>QUEM SOMOS</li> </a>
-                <a href=""><li>CONTATOS</li></a>    
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="menu" class="menu-oculto">
+                <li><a href="links/Produtos.html" target="_blank">PRODUTOS</a></li>
+                <li><a href="#">QUEM SOMOS</a></li>
+                <li><a href="#">CONTATOS</a></li>
             </ul>
         </nav>
     </header>
@@ -57,5 +64,20 @@
         <a href="https://instagram.com" target="_blank">Instagram</a> |
         <a href="https://facebook.com" target="_blank">Facebook</a>
     </footer>
+
+    <script>
+        const menu = document.getElementById("menu");
+        const hamburger = document.querySelector(".hamburger");
+
+            // Mostra o menu ao clicar
+        function toggleMenu() {
+         menu.classList.add("menu-visivel");
+}
+
+        // Esconde o menu ao remover o mouse
+        menu.addEventListener("mouseleave", () => {
+        menu.classList.remove("menu-visivel");
+});
+    </script>
 </body>
 </html>

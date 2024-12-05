@@ -32,27 +32,99 @@ header {
 
 header .logo h1 {
     font-size: 1.5rem;
+    margin: 0;
 }
 
-header nav ul {
+nav {
+    position: relative;
+    transition: all 0.3s ease; /* Suaviza a transição */
+}
+
+nav:hover {
+    transform: scale(1.2); /* Aumenta o item ligeiramente */
+}
+
+ul {
     list-style: none;
-    display: flex;
-    gap: 15px;
+    display: none; /* Oculta o menu por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--cor-5);
+    font-weight: bold;
+    width: 150px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Suaviza a transição */
 }
 
-header nav ul a {
-    text-decoration: none;
-    color: #f4f4f4;
-    font-weight: bold;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+ul:hover {
+    background-color: var(--cor-5); /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto */
+    transform: scale(1.1); /* Aumenta o item ligeiramente */
+    border-radius: 5px; /* Arredonda as bordas */
+}
+
+ul li {
+    margin: 10px 0;
     
 }
 
-header nav ul a:hover {
-     
-    text-decoration: underline;
-    transform: translateY(-5px);
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    
 }
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+/* Ocultar menu por padrão */
+.menu-oculto {
+    display: none; /* Menu escondido */
+    position: absolute;
+    top: 50px; /* Ajuste conforme necessário */
+    right: 0;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-visivel {
+    display: block; /* Exibe o menu */
+}
+
+.menu-oculto li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-oculto li:hover {
+    background-color: var(--cor-2);
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* Quando o menu estiver visível */
+ul.show {
+    display: flex;
+}
+
+
 
 main section h2 {
     color: #520447;
