@@ -110,6 +110,9 @@ section > div > p {
   margin: 20px auto; /* Centraliza a grade */
   max-width: 1200px; /* Limita a largura total */
   
+  flex-direction: column; /* Alinha itens verticalmente */
+  align-items: center; /* Centraliza o conteúdo */
+  
 }
 
 .item {
@@ -137,18 +140,15 @@ section > div > p {
   align-items: center; /* Alinha o conteúdo verticalmente, se necessário */
   width: 100%; /* Certifique-se de que o contêiner ocupe 100% da largura disponível */
   margin-top: 20px; /* Distância do topo, você pode ajustar conforme necessário */
+  margin-bottom: 10px;
+  
 }
 
-/* Botão de compra */
-.container-botao {
-  display: flex;
-  justify-content: center; /* Isso vai garantir que o botão seja centralizado */
-  margin-top: 20px;
-}
 
 .botao-compra {
+  display: flex;
   padding: 15px 30px;
-  background-color: #fa1f0b;
+  background-color: var(--cor-3);
   color: white;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -160,6 +160,14 @@ section > div > p {
   text-decoration: none;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.botao-compra:hover {
+  background-color: var(--cor-3); /* Cor de fundo ao passar o mouse */
+  color: #ffffff; /* Cor do texto ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o botão ligeiramente */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+  transition: all 0.3s ease; /* Suaviza a transição */
 }
 
 /* Rodapé */
@@ -184,22 +192,3 @@ text-decoration: underline;
 
 
 
-/* Responsividade */
-@media (max-width: 768px) {
-.descricao-shampoo {
-    padding: 15px;
-}
-
-.descricao-shampoo h2 {
-    font-size: 1.5rem;
-}
-
-.descricao-shampoo p {
-    font-size: 0.9rem;
-}
-
-.descricao-shampoo .botao-compra {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-}
-}
