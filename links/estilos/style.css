@@ -21,11 +21,7 @@ Body {
   line-height: 1.6;
 }
 
-header {
-  background-color: #ff99cc; /* Cor suave para um site de cosméticos */
-  text-align: center;
-  padding: 50px 20px;
-}
+
 
 header h1 {
     font-size: 36px;
@@ -44,6 +40,7 @@ header p {
     color: white;
     text-align: center;
     padding: 50px 20px;
+    height: 200px;
   }
 
   .banner-promocional h2 {
@@ -218,6 +215,7 @@ header p {
     color: white;
     text-align: center;
     padding: 40px 20px;
+    
   }
   
   .call-to-action h2 {

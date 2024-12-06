@@ -27,12 +27,17 @@ header {
   background-color:var(--cor-1);
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 37px ;
+  height: 100px;
 }
 
 header h1 {
   margin: 0;
   font-size: 30px;
+  
+}
+
+.logo {
   
 }
 
