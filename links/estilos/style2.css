@@ -198,19 +198,15 @@ text-decoration: underline;
 
 @media (max-width: 768px) { /* Tablets e telas menores */
   header h1 {
-    max-width: 200px; /* Define uma largura máxima */
-    word-wrap: break-word; /* Força a quebra quando necessário */
     font-size: 15px;
     font-weight: bolder;
-    text-align: right;
+    text-align: center;
     padding: 10px;
-    height: 10px;
-    margin-left: 250px;
-    
-  }
-   h1 {
+    height: 20px;
+    margin-left: 40px;
   
-   }
+  }
+   
   }
 
 
@@ -218,15 +214,15 @@ text-decoration: underline;
   header h1 {
       font-size: 15px;
       font-weight: bolder;
-      text-align: right;
+      text-align: center;
       padding: 10px;
-      height: 10px;
-      word-wrap: break-word; /* Força a quebra quando necessário */
+      height: 20px;
+      margin-left: 40px;
+    
   }
-  header {
-    height: 10px;
-  }
+  
 }
+
 
 
 
