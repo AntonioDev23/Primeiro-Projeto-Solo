@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+:root {
+    --cor-1: #d4549a; 
+    --cor-2: #ff69b4;
+    --cor-3: #fa1f0b;
+    --cor-4: #666;
+    --cor-5: #520447;
+  }
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  body, html {
+    font-family: 'Arial', sans-serif;
+  }
+
+  header {
+    background-image: linear-gradient (to top, --cor-1, --cor-2, --cor-5);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width: 100vw;
+    height: 100px;
+    padding-top: 40px;
+    line-height: 1.0;
+    
+  }
+
+  
+
+  .parallax {
+    background-image: url('../Imagens/eb30851b-f1a1-407c-82db-a0c4cab257d3.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 600px;
+  }
+
+  .texto-central {
+    
+  }
