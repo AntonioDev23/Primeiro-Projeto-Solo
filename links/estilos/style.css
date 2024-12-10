@@ -209,39 +209,6 @@ header p {
     
   }
   
-  /* Chamada para ação */
-  .call-to-action {
-    background-color:#d4549a;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    
-  }
-  
-  .call-to-action h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-  
-  .call-to-action p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .call-to-action .btn {
-    background-color: #fff;
-    color: #ff66b2;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  .call-to-action .btn:hover {
-    background-color: var(--cor-5);
-  }
-  
   /* Rodapé */
   footer {
     background-color: #333;
