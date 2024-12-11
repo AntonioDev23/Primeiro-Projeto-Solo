@@ -40,16 +40,38 @@ header .logo h1 {
     margin: 0;
 }
 
+#menu {
+    display: flex; /* O menu será exibido lado a lado */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: static; /* Posição padrão */
+    background: none; /* Sem fundo adicional */
+    transform: none; /* Remove efeitos de ocultação */
+  }
+
+  #menu li {
+    margin: 0 10px; /* Espaço entre itens do menu */
+  }
+
+  .hamburger {
+    display: none; /* Oculte o hambúrguer em telas grandes */
+}
+
+
 ul {
     list-style: none;
     top: 40px;
-    right: 0;
-    background-color: #444;
     padding: 10px;
     border-radius: 5px;
-    background-color: var(--cor-5);
     font-weight: bold;
     cursor: pointer;
+    display: flex; /* O menu será exibido lado a lado */
+    flex-direction: row;
+    justify-content: center;
+    position: static; /* Posição padrão */
+    background: none; /* Sem fundo adicional */
+    transform: none; /* Remove efeitos de ocultação */
     transition: all 0.3s ease; /* Suaviza a transição */
 }
 

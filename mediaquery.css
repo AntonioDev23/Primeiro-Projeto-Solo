@@ -1,23 +1,4 @@
-/* Estilo para telas maiores (desktop) */
-@media (min-width: 768px) {
-    #menu {
-      display: flex; /* O menu será exibido lado a lado */
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      position: static; /* Posição padrão */
-      background: none; /* Sem fundo adicional */
-      transform: none; /* Remove efeitos de ocultação */
-    }
-  
-    #menu li {
-      margin: 0 10px; /* Espaço entre itens do menu */
-    }
-  
-    .hamburger {
-      display: none; /* Esconde o ícone do menu hamburguer */
-    }
-  }
+
   
   /* Estilo para dispositivos móveis */
   @media (max-width: 767px) {
@@ -28,7 +9,7 @@
       top: 50px; /* Ajuste conforme necessário */
       left: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+      background-color: #520448b2; /* Fundo semi-transparente */
       z-index: 1000;
       transition: transform 0.3s ease-in-out;
     }
@@ -51,5 +32,11 @@
       height: 3px;
       background-color: #fff;
       border-radius: 3px;
+      display: none;
     }
-  }
+    
+    nav ul {
+            display: none; /* Esconde o menu tradicional */
+    }
+}
+  
