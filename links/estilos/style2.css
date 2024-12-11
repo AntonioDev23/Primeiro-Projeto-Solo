@@ -204,33 +204,34 @@ text-decoration: underline;
 
 @media (max-width: 768px) { /* Tablets e telas menores */
   header h1 {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bolder;
     text-align: center;
-    padding: 10px;
     height: 20px;
-    margin-left: 80px;
+    margin-left: 90px;
+    margin-top: -20;
   
   }
   .logo {
-    font-size: 10px;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    position: absolute;  /* Posicionamento absoluto */
+    top: 10px;           /* Distância do topo da tela ou contêiner */
+    left: 5px;          /* Distância da margem esquerda */
+    padding: 2px 2px;  /* Ajuste de padding do botão */
+    background-color: white; /* Cor do botão */
+    color: rgb(88, 28, 70);        /* Cor do texto */
+    text-decoration: none; /* Retira o sublinhado */
+    border-radius: 5px;  /* Cantos arredondados */
+    font-size: 8px; 
+    font-weight: bolder;    /* Tamanho da fonte */
+    transition: transform 0.3s ease; 
+  
   }
    
   }
-
-
-@media (max-width: 480px) { /* Smartphones */
-  header h1 {
-      font-size: 15px;
-      font-weight: bolder;
-      text-align: center;
-      padding: 10px;
-      height: 20px;
-      margin-left: 40px;
-    
-  }
-  
-}
 
 
 
