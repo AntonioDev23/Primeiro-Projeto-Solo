@@ -24,6 +24,7 @@ body {
 header {
     background-color: var(--cor-1);
     color: #fff;
+    height: 120px;
     padding: 10px 20px;
     display: flex;
     justify-content: space-around;
@@ -39,20 +40,8 @@ header .logo h1 {
     margin: 0;
 }
 
-nav {
-    position: relative;
-    transition: all 0.3s ease; /* Suaviza a transição */
-}
-
-nav:hover {
-    transform: scale(1.2); /* Aumenta o item ligeiramente */
-}
-
 ul {
     list-style: none;
-    display: none; /* Oculta o menu por padrão */
-    flex-direction: column;
-    position: absolute;
     top: 40px;
     right: 0;
     background-color: #444;
@@ -60,17 +49,10 @@ ul {
     border-radius: 5px;
     background-color: var(--cor-5);
     font-weight: bold;
-    width: 150px;
     cursor: pointer;
     transition: all 0.3s ease; /* Suaviza a transição */
 }
 
-ul:hover {
-    background-color: var(--cor-5); /* Cor de fundo ao passar o mouse */
-    color: white; /* Cor do texto */
-    transform: scale(1.1); /* Aumenta o item ligeiramente */
-    border-radius: 5px; /* Arredonda as bordas */
-}
 
 ul li {
     margin: 10px 0;
@@ -81,34 +63,12 @@ ul li a {
     color: white;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    
-}
-
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-}
-
-
-/* Ocultar menu por padrão */
-.menu-oculto {
-    display: none; /* Menu escondido */
-    position: absolute;
-    top: 50px; /* Ajuste conforme necessário */
-    right: 0;
-    list-style: none;
+    font-size: 16px;
+    gap: 15px;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      
 }
 
-.menu-visivel {
-    display: block; /* Exibe o menu */
-}
 
 .menu-oculto li {
     padding: 10px 20px;
@@ -120,13 +80,12 @@ ul li a {
     background-color: var(--cor-2);
     color: white;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra maior */
+    transform: translateY(-5px); /* Combinação com elevação */
+    transition: all 0.3s ease; /* Suavidade */
+    
 }
 
-
-/* Quando o menu estiver visível */
-ul.show {
-    display: flex;
-}
 
  /* Chamada para ação */
  .call-to-action {

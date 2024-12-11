@@ -1,0 +1,55 @@
+/* Estilo para telas maiores (desktop) */
+@media (min-width: 768px) {
+    #menu {
+      display: flex; /* O menu será exibido lado a lado */
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: static; /* Posição padrão */
+      background: none; /* Sem fundo adicional */
+      transform: none; /* Remove efeitos de ocultação */
+    }
+  
+    #menu li {
+      margin: 0 10px; /* Espaço entre itens do menu */
+    }
+  
+    .hamburger {
+      display: none; /* Esconde o ícone do menu hamburguer */
+    }
+  }
+  
+  /* Estilo para dispositivos móveis */
+  @media (max-width: 767px) {
+    #menu {
+      display: none; /* Oculta o menu por padrão */
+      flex-direction: column; /* Alinha os itens verticalmente */
+      position: absolute;
+      top: 50px; /* Ajuste conforme necessário */
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+      z-index: 1000;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    #menu.menu-visivel {
+      display: flex; /* Mostra o menu ao adicionar a classe */
+    }
+  
+    .hamburger {
+      display: flex; /* Mostra o ícone do menu hamburguer */
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 3px;
+    }
+  }
