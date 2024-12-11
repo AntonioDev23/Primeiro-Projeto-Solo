@@ -33,14 +33,18 @@ header {
 }
 
 header > h1 {
-  margin-top: -30px;
   font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: -50px;
+  padding: 8px;
   
 }
 
 .logo {
   font-family: "Protest Revolution", sans-serif;
   text-align: left;
+  font-size: 30px;
+  margin-left: 30px;
 }
 
 .btn {
@@ -200,13 +204,16 @@ text-decoration: underline;
 
 @media (max-width: 768px) { /* Tablets e telas menores */
   header h1 {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bolder;
     text-align: center;
     padding: 10px;
     height: 20px;
-    margin-left: 40px;
+    margin-left: 80px;
   
+  }
+  .logo {
+    font-size: 10px;
   }
    
   }
