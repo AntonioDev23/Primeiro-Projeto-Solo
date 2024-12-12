@@ -29,14 +29,14 @@ header {
   text-align: center;
   padding: 37px ;
   height: 110px;
-  height: auto; /* Permite ajuste dinâmico da altura */
+  
 }
 
 header > h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
-  margin-top: -50px;
-  padding: 8px;
+  margin: 0;
+  font-size: 25px;
+  margin-top: -40px;
+  margin-left: 30px;
   
 }
 
@@ -44,7 +44,8 @@ header > h1 {
   font-family: "Protest Revolution", sans-serif;
   text-align: left;
   font-size: 30px;
-  margin-left: 30px;
+  margin-left: 40px;
+  margin-top: -25px;
 }
 
 .btn {
@@ -230,7 +231,141 @@ text-decoration: underline;
     transition: transform 0.3s ease; 
   
   }
-   
+  section img {
+    max-width: 80%;
+    height: 190px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block; /* Remove comportamento inline padrão da imagem */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+  }
+  
+  section h2, h3 {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    color: var(--cor-5); /* Rosa vibrante */
+    text-decoration: underline;
+    text-align: center;
+  }
+  
+  section strong {
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+    color: var(--cor-2); /* Rosa vibrante */
+    text-decoration: underline;
+    
+  }
+  
+  section > div > p {
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: bolder;
+    color: var(--cor-4);
+  }
+  
+  .titulo {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  .kit-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Itens em colunas flexíveis */
+    gap: 20px; /* Espaço entre as colunas */
+    margin: 20px auto; /* Centraliza a grade */
+    max-width: 500px; /* Limita a largura total */
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
+    
+  }
+  
+  .item {
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 250px;
+  }
+  
+  .item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--cor-3); /* Cor temática */
+  }
+  
+  .item p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  
+  .container-botao {
+    display: flex; /* Flexbox para centralizar */
+    justify-content: center; /* Centraliza o botão horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente, se necessário */
+    width: 100%; /* Certifique-se de que o contêiner ocupe 100% da largura disponível */
+    margin-top: 20px; /* Distância do topo, você pode ajustar conforme necessário */
+    margin-bottom: 10px;
+    
+  }
+  
+  
+  .botao-compra {
+    display: flex;
+    padding: 10px 18px;
+    background-color: var(--cor-3);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .botao-compra:hover {
+    background-color: var(--cor-3); /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o botão ligeiramente */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+    transition: all 0.3s ease; /* Suaviza a transição */
+  }
+  /* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  }
+  
+  footer  a {
+  color: #ff66b2;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9em;
+  }
+  
+  footer a:hover {
+  text-decoration: underline;
+  
+  }
+
   }
 
 
