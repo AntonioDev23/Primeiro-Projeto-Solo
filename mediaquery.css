@@ -7,18 +7,20 @@
       display: none; /* Oculta o menu por padrão */
       flex-direction: column; /* Alinha os itens verticalmente */
       position: absolute;
-      top: 50px; /* Ajuste conforme necessário */
-      left: 0;
-      width: 100%;
+      top: 80px; /* Ajuste conforme necessário */
+      right: 0;
+      width: 50%;
       background-color: #520448b2; /* Fundo semi-transparente */
       z-index: 1000;
       transition: transform 0.3s ease-in-out;
     }
-  
+
+
     #menu.menu-visivel {
       display: flex; /* Mostra o menu ao adicionar a classe */
     }
   
+
     .hamburger {
       display: flex; /* Mostra o ícone do menu hamburguer */
       cursor: pointer;
@@ -27,26 +29,16 @@
       align-items: center;
       gap: 5px;
     }
-  
-    .hamburger span {
-      width: 25px;
-      height: 3px;
-      background-color: #fff;
-      border-radius: 3px;
-      display: none;
-    }
     
     nav ul {
-            display: none; /* Esconde o menu tradicional */
+      display: none; /* Esconde o menu tradicional */
     }
 
-    .banner {
-      background-color: #fabef2;
-      color: var(--cor-5);
-      text-align: center;
-      padding: 20px;
-      margin-bottom: 20px;
-      height: 200px;
+
+    main section h2 {
+      color: #520447;
+      font-weight: bold;
+      font-size: 1.0em;
   }
 
     /* Chamada para ação */
@@ -54,17 +46,19 @@
   color: var(--cor-5);
   text-align: center;
   padding: 40px 20px;
-  height: 120px;
+  height: 135px;
+  margin-bottom: 20px;
+  margin-top: -20px;
   
 }
 
-.call-to-action h2 {
-  font-size: 20px;
+.call-to-action h3 {
+  font-size: 15px;
   margin-bottom: 15px;
 }
 
 .call-to-action p {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 
@@ -82,5 +76,6 @@
 .call-to-action .btn:hover {
   background-color: var(--cor-5);
 }
+
 }
   
