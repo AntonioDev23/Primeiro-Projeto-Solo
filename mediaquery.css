@@ -39,5 +39,48 @@
     nav ul {
             display: none; /* Esconde o menu tradicional */
     }
+
+    .banner {
+      background-color: #fabef2;
+      color: var(--cor-5);
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      height: 200px;
+  }
+
+    /* Chamada para ação */
+ .call-to-action {
+  color: var(--cor-5);
+  text-align: center;
+  padding: 40px 20px;
+  height: 120px;
+  
+}
+
+.call-to-action h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.call-to-action p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.call-to-action .btn {
+  background-color: #fff;
+  color: #ff66b2;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 10px;
+  transition: background-color 0.3s;
+ 
+}
+
+.call-to-action .btn:hover {
+  background-color: var(--cor-5);
+}
 }
   
