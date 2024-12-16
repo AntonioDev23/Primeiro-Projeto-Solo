@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição</title>
+    <link rel="stylesheet" href="estilos/ins.css">
 </head>
 <body>
-    <section>
+    <section class="formulario-inscricao">
         <h2>Inscreva-se para Novidades</h2>
         <p>Receba ofertas exclusivas e fique por dentro das últimas tendências.</p>
-        <form action="" method="post" class="form" autocomplete="on">
+        <form action="#" method="post" class="form" autocomplete="on">
         <label for="nome">Nome Completo</label>
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required autocomplete="name">
 
-        <label for="">E-mail</label>
+        <label for="email">E-mail</label>
         <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required autocomplete="email">
 
-        <label for="">Produtos de Interesse</label>
+        <label for="Interesse">Produtos de Interesse</label>
         <select name="Interesse" id="Interesse">
             <option value="">Maquiagem</option>
             <option value="">Cuidados com a Pele</option>
@@ -25,7 +26,7 @@
         </select>
             <label for="msg">Mensagem</label>
             <textarea name="msg" id="msg" placeholder="Deixe sua mensagem (opcional)" rows="4" ></textarea>
-            <button></button>
+            <button type="submit" class="btn-enviar">Enviar</button>
         </form>
     </section>
 </body>

@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+:root {
+  --cor-1: #d4549a; 
+  --cor-2: #ff69b4;
+  --cor-3: #fa1f0b;
+  --cor-4: #666;
+  --cor-5: #520447;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #d4549a, #f877be, #fa95cc,#f8b2d9,#d4549a);
+    color: #333;
+    margin: 0px;
+    padding: 0px;
+}
+
+.formulario-inscricao {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--cor-5);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.formulario-inscricao h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+}
+
+.formulario-inscricao p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form input, .form select, .form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form input:focus, .form select:focus, .form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ff69b4;
+}
+
+.form textarea {
+    resize: none;
+}
+
+.btn-enviar {
+    background-color: #ff69b4;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #d4549a;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
