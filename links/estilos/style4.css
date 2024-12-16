@@ -197,6 +197,16 @@ section > div > p {
 }
 
 @media (max-width: 768px) { /* Tablets e telas menores */
+  
+  header {
+    background-color:var(--cor-1);
+    color: white;
+    text-align: center;
+    padding: 37px ;
+    height: 80px;
+    
+  }
+
   header h1 {
     font-size: 13px;
     font-weight: bolder;
@@ -209,6 +219,7 @@ section > div > p {
   .logo {
     font-size: 13px;
     margin-bottom: 20px;
+    margin-left: 10px;
   }
   .btn {
     position: absolute;  /* Posicionamento absoluto */
