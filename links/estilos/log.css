@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--cor-4);
+}
+
 .cadastro {
     max-width: 600px;
     margin: 50px auto;
@@ -29,6 +33,11 @@
     color: var(--cor-5);
     margin-bottom: 20px;
 }
+
+.especial {
+    font-family: "Protest Revolution", sans-serif;
+  }
+
 
 .form-group {
     margin-bottom: 15px;
@@ -68,8 +77,33 @@
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .btn-cadastrar:hover {
     background: var(--cor-5);
+    transform: translateY(-3px);
 }
+
+/* Já possui cadastro */ 
+
+.ja-tem-conta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ja-tem-conta p {
+    font-size: 16px;
+    color: #333;
+}
+
+.ja-tem-conta a {
+    color: #ff1493;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ja-tem-conta a:hover {
+    text-decoration: underline;
+}
+
