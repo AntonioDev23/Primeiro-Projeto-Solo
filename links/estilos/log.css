@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+:root {
+    --cor-1: #d4549a; 
+    --cor-2: #ff69b4;
+    --cor-3: #fa1f0b;
+    --cor-4: #666;
+    --cor-5: #520447;
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.cadastro {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:  #ffb6c1;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.cadastro h2 {
+    text-align: center;
+    color: var(--cor-5);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #ff69b4;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+.btn-cadastrar {
+    width: 100%;
+    padding: 12px;
+    background: var(--cor-1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-cadastrar:hover {
+    background: var(--cor-5);
+}
