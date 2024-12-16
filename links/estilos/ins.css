@@ -92,3 +92,22 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+  footer a {
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
+    
+}
+  
+  footer a:hover {
+    text-decoration: underline;
+    
+}
