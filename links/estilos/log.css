@@ -12,6 +12,8 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 body {
@@ -33,9 +35,15 @@ body {
     color: var(--cor-5);
     margin-bottom: 20px;
 }
+.cadastro h3 {
+    text-align: center;
+    color: var(--cor-5);
+    margin-bottom: 20px;
+}
 
 .especial {
-    font-family: "Protest Revolution", sans-serif;
+    font-family: 'Great Vibes', cursive;
+    color: var(--cor-5);
   }
 
 
@@ -85,25 +93,42 @@ body {
     transform: translateY(-3px);
 }
 
-/* Já possui cadastro */ 
-
-.ja-tem-conta {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.ja-tem-conta p {
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: var(--cor-1);
+    border: none;
+    border-radius: 5px;
+    color: white;
     font-size: 16px;
-    color: #333;
-}
-
-.ja-tem-conta a {
-    color: #ff1493;
-    text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.ja-tem-conta a:hover {
+.btn-login:hover {
+    background: var(--cor-5);
+    transform: translateY(-3px);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+  footer a {
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
+    
+}
+  
+  footer a:hover {
     text-decoration: underline;
+    
 }
 

@@ -48,6 +48,7 @@ header .logo h1 {
     position: static; /* Posição padrão */
     background: none; /* Sem fundo adicional */
     transform: none; /* Remove efeitos de ocultação */
+    
   }
 
   #menu li {

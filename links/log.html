@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <input type="password" id="senha" name="senha" placeholder="********" required minlength="8" maxlength="20">
             </div>
             <div class="form-group">
                 <label for="telefone">Telefone(cel):</label>
@@ -46,11 +46,31 @@
             <div class="form-group">
                 <button type="submit" class="btn-cadastrar">Cadastrar</button>
             </div>
+        <!-- Formulário de Login -->
+    <div class="form-container">
+        <h3>Já tem uma conta? Faça login</h3>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="login-email">E-mail:</label>
+                <input type="email" id="login-email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="login-senha">Senha:</label>
+                <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-login">Entrar</button>
+            </div>
         </form>
-        <!-- Opção para quem já tem conta -->
-    <div class="ja-tem-conta">
-        <p>Já tem uma conta? <a href="../links/log2.html" id="login-link">Faça login aqui</a>.</p>
     </div>
     </section>
+
+    <footer>
+        <p>&copy; 2024 ARSN - Todos os direitos reservados.</p>
+        <a href="sobre-nos.html">Contato</a> | 
+        <a href="politica-privacidade.html">Política de Privacidade</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a> |
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+    </footer>
 </body>
 </html>
