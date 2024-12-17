@@ -31,6 +31,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+
 }
 
 .formulario-inscricao h2 {
@@ -111,3 +112,19 @@ footer {
     text-decoration: underline;
     
 }
+
+  /* Estilo para dispositivos móveis */
+  @media (max-width: 767px) {
+    
+    .formulario-inscricao {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: var(--cor-5);
+        color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center; 
+    }
+    
+  }
