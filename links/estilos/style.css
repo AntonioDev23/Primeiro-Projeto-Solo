@@ -59,10 +59,12 @@ Body {
     font-size: 16px;
     transition: transform 0.3s ease;
     text-align: center;
+    
   }
 
   .btn:hover {
     transform: translateY(-5px);
+    transition: transform 0.3s ease, color 0.3s ease; /* Faz o efeito suave */
 
   }
 
@@ -269,5 +271,15 @@ Body {
     .btn:hover {
       transform: translateY(-5px);
   
+    }
+
+    .produtos-destaque h2 {
+      color: var(--cor-5);
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .novidades h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
     }
   }
