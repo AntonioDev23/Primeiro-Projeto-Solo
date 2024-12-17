@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+:root {
+  --cor-1: #d4549a; 
+  --cor-2: #ff69b4;
+  --cor-3: #fa1f0b;
+  --cor-4: #666;
+  --cor-5: #520447;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--cor-1);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+span {
+    font-size: 30px;
+    margin: 0;
+    font-family:  'Great Vibes', cursive;
+    color: white;
+    
+}
+
+.privacy-policy {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #520447;
+}
+
+h3 {
+    color: #ff69b4;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+  footer a {
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
+    
+}
+  
+  footer a:hover {
+    text-decoration: underline;
+    
+}
