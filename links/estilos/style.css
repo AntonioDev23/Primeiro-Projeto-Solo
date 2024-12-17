@@ -29,7 +29,7 @@ Body {
     color: white;
     text-align: center;
     padding: 50px 20px;
-    height: 200px;
+    height: 150px;
     margin-top: -25px;
   }
 
@@ -50,23 +50,6 @@ Body {
     margin-left: 30px;
   }
 
-.btn {
-    background-color: #ffffff;
-    color: #ff66b2;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: transform 0.3s ease;
-    text-align: center;
-    
-  }
-
-  .btn:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease, color 0.3s ease; /* Faz o efeito suave */
-
-  }
 
   .bt {
     position: absolute;  /* Posicionamento absoluto */
@@ -235,7 +218,7 @@ Body {
       background-color: #d4549a; /* Cor chamativa */
       color: white;
       text-align: center;
-      height: 200px;
+      height: 150px;
       margin-top: -25px;
     }
   
@@ -257,21 +240,7 @@ Body {
       margin-left: 30px;
       font-size: 10px;
     }
-    .btn {
-      background-color: #ffffff;
-      color: #ff66b2;
-      padding: 8px 10px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 10px;
-      transition: transform 0.3s ease;
-      text-align: center;
-    }
-  
-    .btn:hover {
-      transform: translateY(-5px);
-  
-    }
+
 
     .produtos-destaque h2 {
       color: var(--cor-5);

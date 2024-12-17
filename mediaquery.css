@@ -1,81 +1,95 @@
-@charset "UTF-8";
 
-  
-  /* Estilo para dispositivos móveis */
-  @media (max-width: 767px) {
-    #menu {
-      display: none; /* Oculta o menu por padrão */
-      flex-direction: column; /* Alinha os itens verticalmente */
-      position: absolute;
-      top: 80px; /* Ajuste conforme necessário */
-      right: 0;
-      width: 50%;
-      background-color: #520448b2; /* Fundo semi-transparente */
-      z-index: 1000;
-      transition: transform 0.3s ease-in-out;
-    }
-
-
-    #menu.menu-visivel {
-      display: flex; /* Mostra o menu ao adicionar a classe */
-    }
-  
-
-    .hamburger {
-      display: flex; /* Mostra o ícone do menu hamburguer */
-      cursor: pointer;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
-    }
-    
-    nav ul {
-      display: none; /* Esconde o menu tradicional */
-    }
-
-
-    main section h2 {
-      color: #520447;
-      font-weight: bold;
-      font-size: 1.0em;
+@media (max-width: 767px) {
+  #menu {
+    transform: translateX(100%); /* Menu fora da tela */
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Altura do menu */
+    right: 0;
+    width: 50%; /* Largura do menu */
+    background-color: #520448b2; /* Fundo semi-transparente */
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+    padding: 20px;
+    border-radius: 5px;
+    display: flex; /* Certifique-se de que seja flex para layout */
+    gap: 15px; /* Espaço entre itens */
   }
 
-    /* Chamada para ação */
- .call-to-action {
-  color: var(--cor-5);
-  text-align: center;
-  padding: 40px 20px;
-  height: 135px;
-  margin-bottom: 20px;
-  margin-top: -20px;
-  
+  #menu.menu-visivel {
+    transform: translateX(0); /* Menu visível */
+  }
+
+  #menu li {
+    display: block; /* Faz com que o item ocupe toda a largura disponível */
+    width: 100%; /* Garantir que o item ocupe toda a largura do menu */
 }
 
-.call-to-action h3 {
-  font-size: 15px;
-  margin-bottom: 15px;
+#menu li a {
+    display: block; /* Faz o link ocupar toda a área do li */
+    padding: 10px 20px; /* Adiciona um pouco de espaçamento ao redor do texto */
+    text-decoration: none; /* Remover sublinhado */
+    color: white; /* Cor do texto */
 }
 
-.call-to-action p {
-  font-size: 14px;
-  margin-bottom: 20px;
+#menu li:hover {
+    background-color: var(--cor-2); /* Cor de fundo no hover */
+    color: white; /* Cor do texto no hover */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
-.call-to-action .btn {
-  background-color: #fff;
-  color: #ff66b2;
-  padding: 5px 10px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 10px;
-  transition: background-color 0.3s;
- 
-}
+  .hamburger {
+    display: flex; /* Mostra o botão hambúrguer */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
 
-.call-to-action .btn:hover {
-  background-color: var(--cor-5);
-}
+  nav ul {
+    display: none; /* Esconde o menu padrão em telas pequenas */
+  }
 
+  main section h2 {
+    font-size: 1.0em;
+    color: #520447;
+    font-weight: bold;
+  }
+
+  /* Chamada para ação */
+  .call-to-action {
+    color: var(--cor-5);
+    text-align: center;
+    padding: 40px 20px;
+    height: 135px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+  }
+
+  .call-to-action h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .call-to-action p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .call-to-action .btn {
+    background-color: #fff;
+    color: #ff66b2;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 10px;
+    transition: background-color 0.3s;
+  }
+
+  .call-to-action .btn:hover {
+    background-color: var(--cor-5);
+  }
 }
-  
