@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+:root {
+    --cor-1: #d4549a; 
+    --cor-2: #ff69b4;
+    --cor-3: #fa1f0b;
+    --cor-4: #666;
+    --cor-5: #520447;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--cor-1);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+span {
+    font-size: 30px;
+    margin: 0;
+    font-family:  'Great Vibes', cursive;
+    color: white;
+    
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(250, 237, 239);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    color: #520447;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #520447;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff69b4;  /* Cor de borda rosa */
+    outline: none;  /* Remove o contorno padrão do navegador */
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5); /* Efeito de sombra para dar um destaque */
+}
+
+button {
+    padding: 10px;
+    background-color: #ff69b4;
+    color: var(--cor-5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #d4549a;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+  footer a {
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
+    
+}
+  
+  footer a:hover {
+    text-decoration: underline;
+    
+}

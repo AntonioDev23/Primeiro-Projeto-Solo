@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - ARSN Loja Virtual</title>
+    <link rel="stylesheet" href="estilos/cont.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Protest+Revolution&display=swap" rel="stylesheet">
+<body>
+    <header><h1>Contato - <span>ARSN Loja Virtual</span></h1></header>
+    <div class="container">
+        <section class="contact-info">
+            <h2>Entre em Contato</h2>
+            <p>Tem alguma dúvida ou sugestão? Fale conosco através do formulário abaixo ou pelos nossos canais de contato:</p>
+            <p><strong>Telefone:</strong> (19) 99999-9999</p>
+            <p><strong>E-mail:</strong> contato@arsnloja.com.br</p>
+        </section>
+        <section>
+            <h3></h3>
+            <form action="enviar-contato.php" method="post">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Sua Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 ARSN - Todos os direitos reservados.</p>
+        <a href="sobre-nos.html">Contato</a> | 
+        <a href="politica-privacidade.html">Política de Privacidade</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a> |
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+    </footer>
+</body>
+</html>
