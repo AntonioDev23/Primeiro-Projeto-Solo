@@ -227,6 +227,7 @@ text-decoration: underline;
     font-size: 13px;
     margin-bottom: 20px;
     margin-left: 10px;
+    font-family:  'Great Vibes', cursive;
   }
   .btn {
     position: absolute;  /* Posicionamento absoluto */

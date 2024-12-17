@@ -21,21 +21,15 @@ Body {
   line-height: 1.6;
 }
 
-
-
-header h1 {
-    font-size: 36px;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 18px;
-    color: #fff;
+section .logo h1 {
+  font-size: 27px;
+  margin: 0;
+  font-family:  'Great Vibes', cursive;
+  
 }
 
 /* Banner promocional */
-.banner-promocional {
+header {
     background-color: #d4549a; /* Cor chamativa */
     color: white;
     text-align: center;
@@ -43,12 +37,12 @@ header p {
     height: 200px;
   }
 
-  .banner-promocional h2 {
+  header h2 {
     font-size: 30px;
     margin-bottom: 15px;
 }
 
-.banner-promocional p {
+.header p {
     font-size: 18px;
     margin-bottom: 20px;
   }
