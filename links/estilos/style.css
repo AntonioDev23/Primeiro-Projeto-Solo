@@ -21,30 +21,33 @@ Body {
   line-height: 1.6;
 }
 
-section .logo h1 {
-  font-size: 27px;
-  margin: 0;
-  font-family:  'Great Vibes', cursive;
-  
-}
+
 
 /* Banner promocional */
-header {
+.banner-promocional {
     background-color: #d4549a; /* Cor chamativa */
     color: white;
     text-align: center;
     padding: 50px 20px;
     height: 200px;
+    margin-top: -25px;
   }
 
-  header h2 {
+  .banner-promocional h2 {
     font-size: 30px;
     margin-bottom: 15px;
+    margin-top: -85px;
 }
 
-.header p {
+.banner-promocional p {
     font-size: 18px;
     margin-bottom: 20px;
+  }
+
+  .logo {
+    text-align: left;
+    font-family: 'Great Vibes', cursive;
+    margin-left: 30px;
   }
 
 .btn {
@@ -222,4 +225,49 @@ header {
     
   }
 
+  
+  /* Estilo para dispositivos móveis */
+  @media (max-width: 767px) {
 
+    .banner-promocional {
+      background-color: #d4549a; /* Cor chamativa */
+      color: white;
+      text-align: center;
+      height: 200px;
+      margin-top: -25px;
+    }
+  
+    .banner-promocional h2 {
+      font-size: 15px;
+      margin-bottom: 15px;
+      margin-top: -45px;
+      margin-left: 120px;
+  }
+  
+  .banner-promocional p {
+      font-size: 11px;
+      margin-bottom: 20px;
+    }
+  
+    .logo {
+      text-align: left;
+      font-family: 'Great Vibes', cursive;
+      margin-left: 30px;
+      font-size: 10px;
+    }
+    .btn {
+      background-color: #ffffff;
+      color: #ff66b2;
+      padding: 8px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 10px;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+  
+    .btn:hover {
+      transform: translateY(-5px);
+  
+    }
+  }
