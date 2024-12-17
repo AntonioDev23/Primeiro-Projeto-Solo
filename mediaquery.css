@@ -65,7 +65,7 @@
     text-align: center;
     padding: 40px 20px;
     height: 135px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: -20px;
   }
 
@@ -87,6 +87,7 @@
     border-radius: 5px;
     font-size: 10px;
     transition: background-color 0.3s;
+
   }
 
   .call-to-action .btn:hover {
