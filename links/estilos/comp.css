@@ -15,6 +15,65 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+  }
+
+  html, body {
+    height: 100%;
+}
+
+  header {
+    background-color: var(--cor-1);
+    color: white;
+    padding: 20px;
+  }
+
+  main {
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .produto {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+  }
+
+  .pagamento h3 {
+    margin-top: 30px;
+  }
+  
+  .opcoes-pagamento {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .btn-pagamento {
+    background-color: #ff66b2;
+    color: var(--cor-5);
+    border: none;
+    font-weight: bolder;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-pagamento:hover {
+    background-color: #e0559e;
+  }
 
 
 /* Rodapé */
