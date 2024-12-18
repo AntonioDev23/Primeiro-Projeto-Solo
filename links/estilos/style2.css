@@ -41,7 +41,7 @@ header > h1 {
 }
 
 .logo {
-  font-family: "Protest Revolution", sans-serif;
+  font-family: 'Great Vibes', cursive;
   text-align: left;
   font-size: 30px;
   margin-left: 40px;
@@ -223,6 +223,7 @@ text-decoration: underline;
     margin-top: -20;
   
   }
+
   .logo {
     font-size: 13px;
     margin-bottom: 20px;
