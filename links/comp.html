@@ -14,8 +14,8 @@
     </header>
     <main>
         <section class="produto">
-            <h2>Produto: Kit de Beleza</h2>
-            <p>Preço: R$ 199,90</p>
+            <h2 id="nome-produto">Produto: Kit de Beleza</h2>
+            <p id="preco-produto">Preço: R$ 199,90</p>
             <h3>Escolha sua Forma de Pagamento</h3>
             <div class="opcoes-pagamento">
                 <button class="btn-pagamento" onclick="window.location.href='boleto.html';">Boleto</button>
@@ -32,5 +32,15 @@
         <a href="https://instagram.com" target="_blank">Instagram</a> |
         <a href="https://facebook.com" target="_blank">Facebook</a>
     </footer>
+    <script>
+        // Script para capturar os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const produto = urlParams.get('produto') || "Produto Desconhecido";
+        const preco = urlParams.get('preco') || "Preço não especificado";
+
+        // Atualizar os elementos com as informações capturadas
+        document.getElementById('nome-produto').textContent = `Produto: ${produto}`;
+        document.getElementById('preco-produto').textContent = `Preço: R$ ${preco}`;
+    </script>
 </body>
 </html>
