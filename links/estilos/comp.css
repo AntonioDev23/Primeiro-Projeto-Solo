@@ -1,0 +1,38 @@
+
+@charset "UTF-8";
+
+:root {
+    --cor-1: #d4549a; 
+    --cor-2: #ff69b4;
+    --cor-3: #fa1f0b;
+    --cor-4: #666;
+    --cor-5: #520447;
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+  footer a {
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
+    
+}
+  
+  footer a:hover {
+    text-decoration: underline;
+    
+}
