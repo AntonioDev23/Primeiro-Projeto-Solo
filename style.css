@@ -241,6 +241,7 @@ main section h2 {
     border-radius: 10px;
     text-align: center;
     position: relative;
+    width: 300px;
 }
 
 .close {
@@ -251,21 +252,37 @@ main section h2 {
     font-size: 20px;
 }
 
-/* Animação do menu hamburguer */
-.menu-visivel {
-    display: block;
-    animation: slideIn 0.3s ease;
+/* Estilos do formulário */
+#newsletter-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+#newsletter-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#newsletter-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensagem de sucesso */
+#success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
 }
 
 
