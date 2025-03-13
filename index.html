@@ -8,24 +8,21 @@
     <link rel="stylesheet" href="mediaquery.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Protest+Revolution&display=swap" rel="stylesheet">
 </head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Protest+Revolution&display=swap" rel="stylesheet">
 <body>
     <header>
         <div class="logo"><h1>ARSN Loja Virtual</h1></div>
         <nav>
             <div class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
             <ul id="menu" class="menu-oculto">
-                <li><a href="links/Produtos.html" target="_blank">PRODUTOS</a></li>
-                <li><a href="links/qsomos.html" target="_blank">QUEM SOMOS</a></li>
-                <li><a href="links/log.html" target="_blank">CADASTRO/LOGIN</a></li>
+                <li><a href="links/Produtos.html" target="_blank" rel="noopener noreferrer">PRODUTOS</a></li>
+                <li><a href="links/qsomos.html" target="_blank" rel="noopener noreferrer">QUEM SOMOS</a></li>
+                <li><a href="links/log.html" target="_blank" rel="noopener noreferrer">CADASTRO/LOGIN</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +33,7 @@
             <section class="call-to-action">
                 <h3>Fique por Dentro das Novidades</h3>
                 <p>Inscreva-se na nossa newsletter para receber promoções e dicas exclusivas de beleza.</p>
-                <a href="links/ins.html" class="btn" target="_blank"><strong>Inscrever-se</strong></a>
+                <a href="#" class="btn" id="newsletter-btn"><strong>Inscrever-se</strong></a>
             </section>
         </section>
 
@@ -60,16 +57,29 @@
                 <p>R$ 199,90</p>
                 <a href="links/kit3.html"><button>Comprar</button></a>
             </div>
-
         </section>
     </main>
     <footer>
         <p>&copy; 2024 ARSN - Todos os direitos reservados.</p>
-        <a href="links/cont.html" target="_blank">Contato</a> | 
-        <a href="links/pol.html" target="_blank">Política de Privacidade</a> |
-        <a href="https://instagram.com" target="_blank">Instagram</a> |
-        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="links/cont.html" target="_blank" rel="noopener noreferrer">Contato</a> | 
+        <a href="links/pol.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> |
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
     </footer>
+
+    <!-- Modal da Newsletter -->
+<div id="newsletter-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Inscreva-se na Newsletter</h3>
+        <form id="newsletter-form">
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="success-message" class="hidden">Inscrição realizada com sucesso! 🎉</p>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>
