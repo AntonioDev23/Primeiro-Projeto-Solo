@@ -1,6 +1,7 @@
 
 const express = require("express");
 const app = express();
+app.use(express.json());
 
 const produtos = [
     {
@@ -22,6 +23,22 @@ app.get("/produtos", (req, res) => {
     res.json(produtos);
 });
 
-app.listen(3000, () => {
+app.post("/produtos", (req, res) => {
+
+    const novoProduto = req.body;
+
+    produtos.push(novoProduto);
+
+    res.send("Produto cadastrado com sucesso!");
+
+});
+
+console.log("Cheguei antes do servidor");
+
+const servidor = app.listen(3000, () => {
     console.log("Servidor rodando na porta 3000");
 });
+
+setInterval(() => {
+    console.log("Servidor continua vivo...");
+}, 5000);
