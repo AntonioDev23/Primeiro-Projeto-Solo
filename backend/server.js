@@ -35,6 +35,10 @@ app.post("/produtos", (req, res) => {
 
 console.log("Cheguei antes do servidor");
 
+app.post("/teste", (req, res) => {
+    res.send("POST funcionando!");
+});
+
 const servidor = app.listen(3000, () => {
     console.log("Servidor rodando na porta 3000");
 });
