@@ -36,12 +36,12 @@ Body {
   .banner-promocional h2 {
     font-size: 30px;
     margin-bottom: 15px;
-    margin-top: -85px;
+    margin-top: -90px;
 }
 
 .banner-promocional p {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-top: -15px;
   }
 
   .logo {
