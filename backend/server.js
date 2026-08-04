@@ -15,28 +15,9 @@ const app = express();
 // Exemplo: dados enviados pelo Body do Postman
 app.use(express.json());
 
+// Importa os produtos do Model
+const produtos = require("./models/produto");
 
-
-// =====================================================
-// BANCO DE DADOS TEMPORÁRIO
-// =====================================================
-
-// Por enquanto estamos usando um array como "banco de dados"
-// Futuramente isso será substituído por um banco real
-// como MySQL, PostgreSQL, MongoDB etc.
-
-const produtos = [
-    {
-        id: 1,
-        nome: "Shampoo hidratante",
-        preco: 49
-    },
-    {
-        id: 2,
-        nome: "Creme anti-idade",
-        preco: 89
-    }
-];
 
 
 
