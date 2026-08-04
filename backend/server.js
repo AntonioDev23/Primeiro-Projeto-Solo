@@ -5,21 +5,20 @@
 
 // Importa a biblioteca Express para criar nosso servidor
 const express = require("express");
-
-
 // Cria uma aplicação Express
 const app = express();
-
-
 // Permite que o servidor entenda dados enviados em JSON
 // Exemplo: dados enviados pelo Body do Postman
 app.use(express.json());
 
+// Importa todas as rotas de produtos
+const produtoRoutes = require("./routes/produtoRoutes");
+// Diz ao Express para utilizar todas as rotas
+// que estão em produtoRoutes.js
+app.use(produtoRoutes);
+
 // Importa os produtos do Model
 const produtos = require("./models/produto");
-
-
-
 
 // =====================================================
 // ROTA PRINCIPAL DO SITE
@@ -34,26 +33,6 @@ app.get("/", (req, res) => {
     res.send("Olá, mundo!");
 
 });
-
-
-
-// =====================================================
-// GET - LISTAR PRODUTOS
-// =====================================================
-
-// Método GET:
-// Usado para BUSCAR informações
-
-// URL:
-// GET http://localhost:3000/produtos
-
-app.get("/produtos", (req, res) => {
-
-    // Retorna todos os produtos em formato JSON
-    res.json(produtos);
-
-});
-
 
 
 // =====================================================
