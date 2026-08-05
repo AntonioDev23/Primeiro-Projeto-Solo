@@ -10,7 +10,7 @@ app.use(express.json());
 const produtoRoutes = require("./routes/produtoRoutes");
 app.use(produtoRoutes); // Registra as rotas
 
-// Importa os produtos (temporário, até mover PUT e DELETE)
+// Importa os produtos (temporário, até mover DELETE)
 const produtos = require("./models/produto");
 
 // Página inicial
@@ -18,25 +18,6 @@ app.get("/", (req, res) => {
     res.send("Olá, mundo!");
 });
 
-// Atualiza um produto
-app.put("/produtos/:id", (req, res) => {
-
-    const id = Number(req.params.id); // ID recebido pela URL
-
-    const produto = produtos.find(
-        produto => produto.id === id
-    );
-
-    if (!produto) {
-        return res.status(404).send("Produto não encontrado");
-    }
-
-    produto.nome = req.body.nome;
-    produto.preco = req.body.preco;
-
-    res.send("Produto atualizado com sucesso!");
-
-});
 
 // Remove um produto
 app.delete("/produtos/:id", (req, res) => {

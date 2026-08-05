@@ -36,8 +36,10 @@ function atualizarProduto(req, res) {
 
     res.send("Produto atualizado com sucesso!");
 }
+
 // Exporta as funções do controller
 module.exports = {
     listarProdutos,
-    criarProduto
+    criarProduto,
+    atualizarProduto
 };

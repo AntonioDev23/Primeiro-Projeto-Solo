@@ -13,5 +13,8 @@ router.get("/produtos", produtoController.listarProdutos);
 // Cadastra um novo produto
 router.post("/produtos", produtoController.criarProduto);
 
+// Atualiza um produto pelo ID
+router.put("/produtos/:id", produtoController.atualizarProduto);
+
 // Exporta as rotas
 module.exports = router;
