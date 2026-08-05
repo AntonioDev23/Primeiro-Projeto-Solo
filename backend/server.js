@@ -1,205 +1,74 @@
 
-// =====================================================
-// IMPORTAÇÃO DO EXPRESS
-// =====================================================
-
-// Importa a biblioteca Express para criar nosso servidor
+// Importa o Express
 const express = require("express");
-// Cria uma aplicação Express
 const app = express();
-// Permite que o servidor entenda dados enviados em JSON
-// Exemplo: dados enviados pelo Body do Postman
+
+// Permite receber dados em JSON
 app.use(express.json());
 
-// Importa todas as rotas de produtos
+// Importa as rotas de produtos
 const produtoRoutes = require("./routes/produtoRoutes");
-// Diz ao Express para utilizar todas as rotas
-// que estão em produtoRoutes.js
-app.use(produtoRoutes);
+app.use(produtoRoutes); // Registra as rotas
 
-// Importa os produtos do Model
+// Importa os produtos (temporário, até mover PUT e DELETE)
 const produtos = require("./models/produto");
 
-// =====================================================
-// ROTA PRINCIPAL DO SITE
-// =====================================================
-
-// Quando alguém acessar:
-// http://localhost:3000/
-
+// Página inicial
 app.get("/", (req, res) => {
-
-    // Envia uma mensagem simples como resposta
     res.send("Olá, mundo!");
-
 });
 
-
-// =====================================================
-// PUT - ATUALIZAR PRODUTO
-// =====================================================
-
-// Método PUT:
-// Usado para editar dados existentes
-
-// URL:
-// PUT http://localhost:3000/produtos/1
-
+// Atualiza um produto
 app.put("/produtos/:id", (req, res) => {
 
-    // Pega o ID enviado na URL
-    // Exemplo: /produtos/1
-
-    const id = Number(req.params.id);
-
-
-
-    // Procura o produto pelo ID
+    const id = Number(req.params.id); // ID recebido pela URL
 
     const produto = produtos.find(
         produto => produto.id === id
     );
 
-
-
-    // Caso o produto não exista
-
     if (!produto) {
-
-        return res
-            .status(404)
-            .send("Produto não encontrado");
-
+        return res.status(404).send("Produto não encontrado");
     }
-
-
-
-    // Atualiza os dados do produto
 
     produto.nome = req.body.nome;
     produto.preco = req.body.preco;
-
-
-
-    // Retorna uma mensagem
 
     res.send("Produto atualizado com sucesso!");
 
 });
 
-
-
-// =====================================================
-// DELETE - REMOVER PRODUTO
-// =====================================================
-
-// Método DELETE:
-// Usado para apagar dados
-
-// URL:
-// DELETE http://localhost:3000/produtos/2
-
+// Remove um produto
 app.delete("/produtos/:id", (req, res) => {
 
-
-    // Pega o ID enviado na URL
-
-    // Exemplo:
-    // /produtos/2
-    //
-    // req.params.id retorna "2" como texto
-    // Number transforma em número
-
-    const id = Number(req.params.id);
-
-
-
-    // Procura a posição do produto dentro do array
+    const id = Number(req.params.id); // ID recebido pela URL
 
     const indice = produtos.findIndex(
         produto => produto.id === id
     );
 
-
-
-    // Caso não encontre o produto
-
     if (indice === -1) {
-
-        return res
-            .status(404)
-            .send("Produto não encontrado");
-
+        return res.status(404).send("Produto não encontrado");
     }
 
-
-
-    // Remove o produto do array
-
-    produtos.splice(indice, 1);
-
-
-
-    // Envia confirmação
+    produtos.splice(indice, 1); // Remove do array
 
     res.send("Produto removido com sucesso!");
 
 });
 
-
-
-// =====================================================
-// ROTA DE TESTE
-// =====================================================
-
-// Essa rota foi criada apenas para testar se o POST funciona
-
-// URL:
-// POST http://localhost:3000/teste
-
+// Rota usada apenas para testes
 app.post("/teste", (req, res) => {
-
 
     console.log("ENTROU NA ROTA TESTE");
 
-
-
     res.status(200).json({
-
         mensagem: "POST funcionando!"
-
     });
 
 });
 
-
-
-// =====================================================
-// INICIALIZAÇÃO DO SERVIDOR
-// =====================================================
-
-// Faz o Express começar a escutar requisições
-// na porta 3000
-
-const servidor = app.listen(3000, () => {
-
+// Inicia o servidor
+app.listen(3000, () => {
     console.log("Servidor rodando na porta 3000");
-
 });
-
-
-
-// =====================================================
-// TESTE DE VIDA DO SERVIDOR
-// =====================================================
-
-// Isso era apenas para confirmar que o Node continuava ativo.
-// Em um projeto real, essa parte seria removida.
-
-/*
-setInterval(() => {
-
-    console.log("Servidor continua vivo...");
-
-}, 5000);
-*/
