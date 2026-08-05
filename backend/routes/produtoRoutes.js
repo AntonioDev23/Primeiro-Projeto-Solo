@@ -43,6 +43,15 @@ const produtoController = require("../controllers/produtoController");
 
 router.get("/produtos", produtoController.listarProdutos);
 
+// Quando alguém fizer:
+//
+// POST /produtos
+//
+// Esta rota chamará a função criarProduto()
+// que está no Controller.
+
+router.post("/produtos", produtoController.criarProduto);
+
 
 
 // =====================================================

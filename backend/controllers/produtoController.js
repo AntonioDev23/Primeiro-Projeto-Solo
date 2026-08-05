@@ -1,53 +1,22 @@
-// =====================================================
-// IMPORTAÇÃO DO MODEL
-// =====================================================
-
-// Importa o array de produtos que está na pasta "models".
-// No futuro, quando usarmos um banco de dados, este arquivo
-// continuará existindo, mas buscará os dados do banco.
-
+// Importa o array de produtos
 const produtos = require("../models/produto");
 
-
-
-// =====================================================
-// FUNÇÃO - LISTAR PRODUTOS
-// =====================================================
-
-// Esta função é responsável por devolver todos os produtos.
-//
-// Ela recebe:
-//
-// req (Request)
-// → Contém tudo o que o cliente enviou.
-//
-// res (Response)
-// → É usado para enviar uma resposta ao cliente.
-
+// Lista todos os produtos
 function listarProdutos(req, res) {
-
-    // Envia todos os produtos em formato JSON.
-
-    res.json(produtos);
-
+    res.json(produtos); // Envia os produtos em JSON
 }
 
+// Cadastra um novo produto
+function criarProduto(req, res) {
+    const novoProduto = req.body; // Dados enviados pelo cliente
 
+    produtos.push(novoProduto); // Adiciona ao array
 
-// =====================================================
-// EXPORTAÇÃO DAS FUNÇÕES
-// =====================================================
+    res.send("Produto cadastrado com sucesso!"); // Confirma o cadastro
+}
 
-// Disponibiliza esta função para outros arquivos.
-//
-// Quem vai utilizar esta função será a pasta "routes".
-//
-// Exemplo:
-//
-// app.get("/produtos", produtoController.listarProdutos);
-
+// Exporta as funções do controller
 module.exports = {
-
-    listarProdutos
-
+    listarProdutos,
+    criarProduto
 };

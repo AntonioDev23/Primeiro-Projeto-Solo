@@ -36,43 +36,6 @@ app.get("/", (req, res) => {
 
 
 // =====================================================
-// POST - CADASTRAR PRODUTO
-// =====================================================
-
-// Método POST:
-// Usado para CRIAR novos dados
-
-// URL:
-// POST http://localhost:3000/produtos
-
-app.post("/produtos", (req, res) => {
-
-
-    // Pega os dados enviados pelo Body da requisição
-    // Exemplo:
-    // {
-    //   "id": 3,
-    //   "nome": "Protetor solar",
-    //   "preco": 59
-    // }
-
-    const novoProduto = req.body;
-
-
-
-    // Adiciona o novo produto dentro do array
-
-    produtos.push(novoProduto);
-
-
-
-    // Resposta enviada para o usuário
-
-    res.send("Produto cadastrado com sucesso!");
-
-});
-
-// =====================================================
 // PUT - ATUALIZAR PRODUTO
 // =====================================================
 
