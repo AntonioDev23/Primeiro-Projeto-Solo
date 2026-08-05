@@ -1,63 +1,17 @@
-// =====================================================
-// IMPORTAÇÃO DO EXPRESS
-// =====================================================
-
-// Importa apenas o sistema de rotas do Express.
-// Não cria um novo servidor, apenas um organizador de rotas.
-
+// Importa o Express
 const express = require("express");
 
-
-
-// =====================================================
-// CRIAÇÃO DO ROUTER
-// =====================================================
-
-// O Router funciona como uma "mini aplicação".
-// Ele serve para organizar as rotas relacionadas aos produtos.
-
+// Cria o gerenciador de rotas
 const router = express.Router();
 
-
-
-// =====================================================
-// IMPORTAÇÃO DO CONTROLLER
-// =====================================================
-
-// Importa as funções responsáveis por executar a lógica.
-
+// Importa o controller de produtos
 const produtoController = require("../controllers/produtoController");
 
-
-
-// =====================================================
-// ROTAS DE PRODUTOS
-// =====================================================
-
-// Quando alguém fizer:
-//
-// GET /produtos
-//
-// Esta rota chamará a função listarProdutos()
-// que está no Controller.
-
+// Lista todos os produtos
 router.get("/produtos", produtoController.listarProdutos);
 
-// Quando alguém fizer:
-//
-// POST /produtos
-//
-// Esta rota chamará a função criarProduto()
-// que está no Controller.
-
+// Cadastra um novo produto
 router.post("/produtos", produtoController.criarProduto);
 
-
-
-// =====================================================
-// EXPORTAÇÃO DAS ROTAS
-// =====================================================
-
-// Disponibiliza este conjunto de rotas para o server.js.
-
+// Exporta as rotas
 module.exports = router;
