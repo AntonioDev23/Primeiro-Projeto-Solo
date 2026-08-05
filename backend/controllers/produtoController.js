@@ -37,9 +37,28 @@ function atualizarProduto(req, res) {
     res.send("Produto atualizado com sucesso!");
 }
 
+// Remove um produto
+function deletarProduto(req, res) {
+
+    const id = Number(req.params.id); // ID recebido pela URL
+
+    const indice = produtos.findIndex(
+        produto => produto.id === id
+    ); // Procura a posição do produto
+
+    if (indice === -1) {
+        return res.status(404).send("Produto não encontrado");
+    }
+
+    produtos.splice(indice, 1); // Remove o produto
+
+    res.send("Produto removido com sucesso!");
+}
+
 // Exporta as funções do controller
 module.exports = {
     listarProdutos,
     criarProduto,
-    atualizarProduto
+    atualizarProduto,
+    deletarProduto
 };
