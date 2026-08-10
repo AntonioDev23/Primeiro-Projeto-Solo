@@ -1,9 +1,19 @@
 // Importa o array de produtos
-const produtos = require("../models/produto");
+const pool = require("../config/database");
 
 // Lista todos os produtos
-function listarProdutos(req, res) {
-    res.json(produtos); // Envia os produtos em JSON
+async function listarProdutos(req, res) {
+    try {
+        const resultado = await pool.query("SELECT * FROM produtos");
+
+        res.json(resultado.rows);
+    } catch (erro) {
+        console.error("Erro ao buscar produtos:", erro);
+
+        res.status(500).json({
+            erro: "Erro ao buscar produtos"
+        });
+    }
 }
 
 // Cadastra um novo produto
