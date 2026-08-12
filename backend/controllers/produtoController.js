@@ -17,52 +17,79 @@ async function listarProdutos(req, res) {
 }
 
 // Cadastra um novo produto
-function criarProduto(req, res) {
+async function criarProduto(req, res) {
+    try {
+        const { nome, preco } = req.body;
 
-    console.log("ENTROU EM criarProduto");
+        const resultado = await pool.query(
+            "INSERT INTO produtos (nome, preco) VALUES ($1, $2) RETURNING *",
+            [nome, preco]
+        );
 
-    const novoProduto = req.body; // Dados enviados pelo cliente
+        res.status(201).json(resultado.rows[0]);
+    } catch (erro) {
+        console.error("Erro ao cadastrar produto:", erro);
 
-    produtos.push(novoProduto); // Adiciona ao array
-
-    res.send("Produto cadastrado com sucesso!");
+        res.status(500).json({
+            erro: "Erro ao cadastrar produto"
+        });
+    }
 }
 
 // Atualiza um produto existente
-function atualizarProduto(req, res) {
+async function atualizarProduto(req, res) {
+    try {
+        const id = Number(req.params.id);
+        const { nome, preco } = req.body;
 
-    const id = Number(req.params.id); // Pega o ID da URL
+        const resultado = await pool.query(
+            "UPDATE produtos SET nome = $1, preco = $2 WHERE id = $3 RETURNING *",
+            [nome, preco, id]
+        );
 
-    const produto = produtos.find(
-        produto => produto.id === id
-    ); // Procura o produto pelo ID
+        if (resultado.rows.length === 0) {
+            return res.status(404).json({
+                erro: "Produto não encontrado"
+            });
+        }
 
-    if (!produto) {
-        return res.status(404).send("Produto não encontrado");
+        res.json(resultado.rows[0]);
+    } catch (erro) {
+        console.error("Erro ao atualizar produto:", erro);
+
+        res.status(500).json({
+            erro: "Erro ao atualizar produto"
+        });
     }
-
-    produto.nome = req.body.nome; // Atualiza o nome
-    produto.preco = req.body.preco; // Atualiza o preço
-
-    res.send("Produto atualizado com sucesso!");
 }
 
 // Remove um produto
-function deletarProduto(req, res) {
+async function deletarProduto(req, res) {
+    try {
+        const id = Number(req.params.id);
 
-    const id = Number(req.params.id); // ID recebido pela URL
+        const resultado = await pool.query(
+            "DELETE FROM produtos WHERE id = $1 RETURNING *",
+            [id]
+        );
 
-    const indice = produtos.findIndex(
-        produto => produto.id === id
-    ); // Procura a posição do produto
+        if (resultado.rows.length === 0) {
+            return res.status(404).json({
+                erro: "Produto não encontrado"
+            });
+        }
 
-    if (indice === -1) {
-        return res.status(404).send("Produto não encontrado");
+        res.json({
+            mensagem: "Produto removido com sucesso!",
+            produto: resultado.rows[0]
+        });
+    } catch (erro) {
+        console.error("Erro ao deletar produto:", erro);
+
+        res.status(500).json({
+            erro: "Erro ao deletar produto"
+        });
     }
-
-    produtos.splice(indice, 1); // Remove o produto
-
-    res.send("Produto removido com sucesso!");
 }
 
 // Exporta as funções do controller
