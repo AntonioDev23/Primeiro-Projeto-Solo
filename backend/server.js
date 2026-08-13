@@ -3,12 +3,18 @@
 const express = require("express");
 const app = express();
 
+// Importa o CORS
+const cors = require("cors");
+
 // Permite receber dados em JSON
 app.use(express.json());
 
+// Permite que o frontend acesse o backend
+app.use(cors());
+
 // Importa as rotas de produtos
 const produtoRoutes = require("./routes/produtoRoutes");
-app.use(produtoRoutes); // Registra as rotas
+app.use(produtoRoutes);
 
 // Página inicial
 app.get("/", (req, res) => {
