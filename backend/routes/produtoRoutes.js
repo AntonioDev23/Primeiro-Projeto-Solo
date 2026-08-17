@@ -9,6 +9,8 @@ const produtoController = require("../controllers/produtoController");
 
 // Lista todos os produtos
 router.get("/produtos", produtoController.listarProdutos);
+// Busca um produto pelo ID
+router.get("/produtos/:id", produtoController.buscarProdutoPorId);
 // Cadastra um novo produto
 router.post("/produtos", produtoController.criarProduto);
 // Atualiza um produto pelo ID

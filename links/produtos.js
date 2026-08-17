@@ -21,7 +21,7 @@ fetch("http://localhost:3000/produtos")
                 <img src="${produto.imagem}" alt="${produto.nome}">
                 <h3>${produto.nome}</h3>
                 <p>R$ ${produto.preco}</p>
-                <a href="${produto.link}" class="btn">Ver Detalhes</a>
+                <a href="produto.html?id=${produto.id}" class="btn">Ver Detalhes</a>
             `;
 
             if (produto.secao === "destaque") {

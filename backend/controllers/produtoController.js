@@ -16,6 +16,33 @@ async function listarProdutos(req, res) {
     }
 }
 
+// Busca um produto pelo ID
+async function buscarProdutoPorId(req, res) {
+    try {
+        const id = Number(req.params.id);
+
+        const resultado = await pool.query(
+            "SELECT * FROM produtos WHERE id = $1",
+            [id]
+        );
+
+        if (resultado.rows.length === 0) {
+            return res.status(404).json({
+                erro: "Produto não encontrado"
+            });
+        }
+
+        res.json(resultado.rows[0]);
+
+    } catch (erro) {
+        console.error("Erro ao buscar produto:", erro);
+
+        res.status(500).json({
+            erro: "Erro ao buscar produto"
+        });
+    }
+}
+
 // Cadastra um novo produto
 async function criarProduto(req, res) {
     try {
@@ -95,6 +122,7 @@ async function deletarProduto(req, res) {
 // Exporta as funções do controller
 module.exports = {
     listarProdutos,
+    buscarProdutoPorId,
     criarProduto,
     atualizarProduto,
     deletarProduto
