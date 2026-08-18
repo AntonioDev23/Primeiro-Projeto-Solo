@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+:root {
+    --cor-1: #d4549a;
+    --cor-2: #ff69b4;
+    --cor-3: #fa1f0b;
+    --cor-4: #666;
+    --cor-5: #520447;
+}
+
+/* Configuração geral da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-1);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Botão voltar */
+.btn {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    padding: 5px;
+    background-color: white;
+    color: rgb(88, 28, 70);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 9px;
+    font-weight: bolder;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+/* Área principal do produto */
+.detalhes-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+}
+
+/* Imagem do produto */
+.produto-imagem {
+    max-width: 100%;
+    width: auto;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Área de descrição */
+.descricao {
+    text-align: center;
+    color: var(--cor-5);
+}
+
+/* Nome do produto */
+.descricao h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--cor-2);
+}
+
+/* Preço do produto */
+#produto-preco {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-3);
+    margin: 10px 0 20px;
+}
+
+/* Textos */
+.descricao p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 2;
+}
+
+/* Títulos das seções */
+.descricao h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-2);
+    line-height: 1.8;
+}
+
+/* Benefícios */
+#produto-beneficios {
+    white-space: pre-line;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+/* Modo de uso */
+#produto-modo-uso {
+    white-space: pre-line;
+}
+
+/* Composição */
+#produto-composicao {
+    line-height: 1.8;
+}
+
+/* Botão de compra */
+.botao-compra {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: var(--cor-3);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.botao-compra:hover {
+    background-color: #e65b50;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ff66b2;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    .detalhes-produto {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .produto-imagem {
+        max-width: 90%;
+        height: 300px;
+    }
+
+    .descricao h2 {
+        font-size: 1.5rem;
+    }
+
+    .descricao p {
+        font-size: 0.9rem;
+    }
+
+    .botao-compra {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
