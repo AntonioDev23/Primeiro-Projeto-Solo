@@ -2,22 +2,59 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Ajusta a página para telas menores -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Produto</title>
 </head>
 
 <body>
 
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>IMPERDÍVEL!!</h1>
+
+        <!-- Volta para a lista de produtos -->
+        <a href="Produtos.html" class="btn">←</a>
+    </header>
+
+    <!-- Área principal do produto -->
     <section class="detalhes-produto">
 
-        <img id="produto-imagem" src="" alt="">
+        <!-- Imagem preenchida pelo JavaScript -->
+        <img id="produto-imagem" src="" alt="" class="produto-imagem">
 
         <div class="descricao">
 
+            <!-- Nome preenchido pelo JavaScript -->
             <h2 id="produto-nome"></h2>
 
+            <!-- Preço preenchido pelo JavaScript -->
             <p id="produto-preco"></p>
 
+            <!-- Descrição preenchida pelo JavaScript -->
+            <p id="produto-descricao"></p>
+
+            <!-- Título dos benefícios -->
+            <h3>Benefícios:</h3>
+
+            <!-- Benefícios preenchidos pelo JavaScript -->
+            <div id="produto-beneficios"></div>
+
+            <!-- Título do modo de uso -->
+            <h3>Modo de Uso:</h3>
+
+            <!-- Modo de uso preenchido pelo JavaScript -->
+            <p id="produto-modo-uso"></p>
+
+            <!-- Título da composição -->
+            <h3>Composição:</h3>
+
+            <!-- Composição preenchida pelo JavaScript -->
+            <p id="produto-composicao"></p>
+
+            <!-- Botão de compra -->
             <a id="produto-link" href="#" class="botao-compra">
                 Comprar Agora
             </a>
@@ -26,6 +63,7 @@
 
     </section>
 
+    <!-- Carrega o JavaScript do produto -->
     <script src="produto.js"></script>
 
 </body>
