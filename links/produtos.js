@@ -8,7 +8,7 @@ fetch("http://localhost:3000/produtos")
         produtos.forEach(produto => {
 
             const div = document.createElement("div");
-
+            
             if (produto.secao === "destaque") {
                 div.classList.add("produto");
             }

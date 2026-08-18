@@ -22,18 +22,17 @@ Body {
 }
 
 
-
 /* Banner promocional */
 .banner-promocional {
-    background-color: #d4549a; /* Cor chamativa */
+    background-color: #d4549a;
     color: white;
     text-align: center;
     padding: 50px 20px;
     height: 150px;
     margin-top: -25px;
-  }
+}
 
-  .banner-promocional h2 {
+.banner-promocional h2 {
     font-size: 30px;
     margin-bottom: 15px;
     margin-top: -90px;
@@ -42,38 +41,39 @@ Body {
 .banner-promocional p {
     font-size: 18px;
     margin-top: -15px;
-  }
+}
 
-  .logo {
+.logo {
     text-align: left;
     font-family: 'Great Vibes', cursive;
     margin-left: 30px;
-  }
+}
 
 
-  .bt {
-    position: absolute;  /* Posicionamento absoluto */
-    top: 10px;           /* Distância do topo da tela ou contêiner */
-    left: 5px;          /* Distância da margem esquerda */
-    padding: 5px 5px;  /* Ajuste de padding do botão */
-    background-color: white; /* Cor do botão */
-    color: rgb(88, 28, 70);        /* Cor do texto */
-    text-decoration: none; /* Retira o sublinhado */
-    border-radius: 5px;  /* Cantos arredondados */
+.bt {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    padding: 5px 5px;
+    background-color: white;
+    color: rgb(88, 28, 70);
+    text-decoration: none;
+    border-radius: 5px;
     font-size: 9px; 
-    font-weight: bolder;    /* Tamanho da fonte */
+    font-weight: bolder;
     transition: transform 0.3s ease; 
-  }
+}
 
-  .bt:hover {
+.bt:hover {
     transform: translateY(-5px);
-  }
+}
 
-
-  .banner-promocional .btn:hover {
+.banner-promocional .btn:hover {
     background-color: #854961;
     transform: translateY(-5px); 
 }
+
+
 /* Seção de produtos em destaque */
 .produtos-destaque {
     padding: 40px 20px;
@@ -83,7 +83,7 @@ Body {
 }
 
 .produtos-destaque h2 {
-  color: var(--cor-5);
+    color: var(--cor-5);
     font-size: 28px;
     margin-bottom: 20px;
 }
@@ -99,11 +99,15 @@ Body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Imagens dos produtos em destaque */
 .produtos-destaque .produto img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: contain;
     border-radius: 5px;
 }
+
 
 .produtos-destaque .produto h3 {
     font-size: 18px;
@@ -128,127 +132,131 @@ Body {
     background-color: var(--cor-5);
 }
 
+
 /* Seção de novidades */
 .novidades {
     padding: 40px 20px;
     background-color: #f8f8f8;
     text-align: center;
     color: var(--cor-5);
-  }
+}
 
-  .novidades .novidade {
+.novidades .novidade {
     display: inline-block;
-    width: 200px;  /* Mesma largura dos produtos em destaque */
+    width: 200px;
     margin: 10px;
     text-align: center;
     background-color: #f4f4f4;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .novidades .novidade img {
-    width: 100%;   /* As imagens vão ocupar 100% da largura do contêiner */
-    height: auto;  /* Mantém a proporção da imagem */
-    border-radius: 5px;
-  }
+}
 
-  .novidades .novidade h3 {
+
+/* Imagens das novidades */
+.novidades .novidade img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.novidades .novidade h3 {
     font-size: 18px;
     margin: 10px 0;
-  }
-  
-  .novidades .novidade p {
+}
+
+.novidades .novidade p {
     font-size: 16px;
-    color:var(--cor-5);
-  }
-  
-  .novidades .novidade .btn {
+    color: var(--cor-5);
+}
+
+.novidades .novidade .btn {
     background-color: #ff66b2;
     color: white;
     padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
-  }
-  
-  .novidades .novidade .btn:hover {
+}
+
+.novidades .novidade .btn:hover {
     background-color: var(--cor-5);
-  }
-  
-  .novidades h2 {
+}
+
+.novidades h2 {
     font-size: 28px;
     margin-bottom: 20px;
-  }
-  
-  .novidades ul {
+}
+
+.novidades ul {
     list-style: none;
-  }
-  
-  .novidades li {
+}
+
+.novidades li {
     font-size: 18px;
     margin: 10px 0;
-    
-  }
-  
-  /* Rodapé */
-  footer {
+}
+
+
+/* Rodapé */
+footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: #ff66b2;
     text-decoration: none;
     margin: 0 10px;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-    
-  }
+}
 
-  
-  /* Estilo para dispositivos móveis */
-  @media (max-width: 767px) {
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 767px) {
 
     .banner-promocional {
-      background-color: #d4549a; /* Cor chamativa */
-      color: white;
-      text-align: center;
-      height: 150px;
-      margin-top: -25px;
-    }
-  
-    .banner-promocional h2 {
-      font-size: 15px;
-      margin-bottom: 15px;
-      margin-top: -45px;
-      margin-left: 120px;
-  }
-  
-  .banner-promocional p {
-      font-size: 11px;
-      margin-bottom: 20px;
-    }
-  
-    .logo {
-      text-align: left;
-      font-family: 'Great Vibes', cursive;
-      margin-left: 30px;
-      font-size: 10px;
+        background-color: #d4549a;
+        color: white;
+        text-align: center;
+        height: 150px;
+        margin-top: -25px;
     }
 
+    .banner-promocional h2 {
+        font-size: 15px;
+        margin-bottom: 15px;
+        margin-top: -45px;
+        margin-left: 120px;
+    }
+
+    .banner-promocional p {
+        font-size: 11px;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        text-align: left;
+        font-family: 'Great Vibes', cursive;
+        margin-left: 30px;
+        font-size: 10px;
+    }
 
     .produtos-destaque h2 {
-      color: var(--cor-5);
+        color: var(--cor-5);
         font-size: 20px;
         margin-bottom: 20px;
     }
+
     .novidades h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
+        font-size: 20px;
+        margin-bottom: 20px;
     }
-  }
+}
+
