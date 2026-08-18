@@ -46,6 +46,12 @@ fetch(`http://localhost:3000/produtos/${id}`)
         document.querySelector("#produto-modo-uso").textContent =
             produto.modo_uso;
 
+            // Esconde o modo de uso quando o produto não possui essa informação
+        if (!produto.modo_uso) {
+            document.querySelector("#titulo-modo-uso").style.display = "none";
+            document.querySelector("#produto-modo-uso").style.display = "none";
+        }
+
         // Coloca a composição na página
         document.querySelector("#produto-composicao").textContent =
             produto.composicao;
