@@ -16,18 +16,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Cabeçalho */
-header {
-    background-color: var(--cor-1);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 36px;
-}
 
 /* Botão voltar */
 .btn {

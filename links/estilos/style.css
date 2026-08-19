@@ -43,11 +43,7 @@ Body {
     margin-top: -15px;
 }
 
-.logo {
-    text-align: left;
-    font-family: 'Great Vibes', cursive;
-    margin-left: 30px;
-}
+
 
 
 .bt {
@@ -218,45 +214,31 @@ footer a:hover {
 }
 
 
-/* Estilo para dispositivos móveis */
-@media (max-width: 767px) {
+header {
+    background-color: #d4549a !important;
+    height: 100px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+}
 
-    .banner-promocional {
-        background-color: #d4549a;
-        color: white;
-        text-align: center;
-        height: 150px;
-        margin-top: -25px;
-    }
+header .logo {
+    position: absolute !important;
+    left: 30px !important;
+    font-size: 30px !important;
+    font-family: 'Great Vibes', cursive !important;
+    color: white !important;
+    text-decoration: none !important;
+}
 
-    .banner-promocional h2 {
-        font-size: 15px;
-        margin-bottom: 15px;
-        margin-top: -45px;
-        margin-left: 120px;
-    }
+header h1 {
+    margin: 0 !important;
+    font-size: 30px !important;
+}
 
-    .banner-promocional p {
-        font-size: 11px;
-        margin-bottom: 20px;
-    }
-
-    .logo {
-        text-align: left;
-        font-family: 'Great Vibes', cursive;
-        margin-left: 30px;
-        font-size: 10px;
-    }
-
-    .produtos-destaque h2 {
-        color: var(--cor-5);
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .novidades h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
+header nav {
+    position: absolute !important;
+    right: 30px !important;
 }
 

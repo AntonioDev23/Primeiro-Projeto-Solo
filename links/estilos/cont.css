@@ -14,20 +14,6 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: var(--cor-1);
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-span {
-    font-size: 30px;
-    margin: 0;
-    font-family:  'Great Vibes', cursive;
-    color: white;
-    
-}
 
 .container {
     width: 80%;

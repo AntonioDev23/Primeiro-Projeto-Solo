@@ -16,24 +16,6 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: var(--cor-1);
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 30px;
-}
-
-span {
-    font-size: 30px;
-    margin: 0;
-    font-family:  'Great Vibes', cursive;
-    color: white;
-    
-}
 
 .privacy-policy {
     padding: 20px;

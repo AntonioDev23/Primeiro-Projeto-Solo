@@ -90,23 +90,6 @@ ul li a {
 }
 
 
-.menu-oculto li {
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.menu-oculto li:hover {
-    background-color: var(--cor-2);
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra maior */
-    transform: translateY(-5px); /* Combinação com elevação */
-    transition: all 0.3s ease; /* Suavidade */
-    
-}
-
-
  /* Chamada para ação */
  .call-to-action {
     color: var(--cor-5);
