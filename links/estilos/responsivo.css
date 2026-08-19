@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* =========================================
+   RESPONSIVIDADE GLOBAL DO SITE
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       CONFIGURAÇÕES GERAIS
+    ========================= */
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+        width: 100%;
+        height: 80px;
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 13px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 13px;
+        margin: 0;
+    }
+
+    .btn {
+        top: 10px;
+        left: 5px;
+        padding: 2px;
+        font-size: 8px;
+    }
+
+    /* =========================
+       IMAGENS
+    ========================= */
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* =========================
+       TEXTOS
+    ========================= */
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    /* =========================
+       RODAPÉ
+    ========================= */
+
+    footer {
+        width: 100%;
+        padding: 20px 10px;
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        font-size: 0.85rem;
+        margin: 0 5px;
+    }
+}
