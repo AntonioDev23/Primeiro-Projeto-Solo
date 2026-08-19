@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Protest+Revolution&display=swap" rel="stylesheet">
 <body>
     <header>
-        <div class="logo"><h1>ARSN Loja Virtual</h1></div>
+        <div id="logo"></div>
         <p>Pagamento de Produto</p>
     </header>
     <main>
@@ -42,5 +42,7 @@
         document.getElementById('nome-produto').textContent = `Produto: ${produto}`;
         document.getElementById('preco-produto').textContent = `Preço: R$ ${preco}`;
     </script>
+
+    <script type="module" src="../components/componentes.js"></script>
 </body>
 </html>

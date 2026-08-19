@@ -1,0 +1,25 @@
+
+header {
+    background-color: #d4549a;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 30px;
+    font-size: 30px;
+    margin: 0;
+    font-family: 'Great Vibes', cursive;
+    color: white;
+    text-decoration: none;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}

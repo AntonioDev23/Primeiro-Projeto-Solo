@@ -1,20 +1,20 @@
 
 const caminhoComponentes = new URL(".", import.meta.url);
 
-fetch(new URL("logo.html", caminhoComponentes))
+fetch(new URL("header.html", caminhoComponentes))
     .then(resposta => resposta.text())
-    .then(logo => {
-        const elementoLogo = document.getElementById("logo");
+    .then(header => {
+        const elementoHeader = document.getElementById("header");
 
-        if (elementoLogo) {
-            elementoLogo.innerHTML = logo;
+        if (elementoHeader) {
+            elementoHeader.innerHTML = header;
         }
     })
     .catch(erro => {
-        console.error("Erro ao carregar o logo:", erro);
+        console.error("Erro ao carregar o header:", erro);
     });
 
 const css = document.createElement("link");
 css.rel = "stylesheet";
-css.href = new URL("logo.css", caminhoComponentes);
+css.href = new URL("header.css", caminhoComponentes);
 document.head.appendChild(css);
