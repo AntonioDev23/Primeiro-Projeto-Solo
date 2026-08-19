@@ -35,14 +35,6 @@ header {
 }
 
 
-header .logo h1 {
-    font-size: 30px;
-    margin: 0;
-    font-family:  'Great Vibes', cursive;
-    color: white;
-    
-}
-
 #menu {
     display: flex; /* O menu será exibido lado a lado */
     flex-direction: row;
