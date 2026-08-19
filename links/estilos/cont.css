@@ -8,12 +8,22 @@
     --cor-5: #520447;
   }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+html {
     margin: 0;
-    padding: 0;
+    min-height: 100%;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    flex: 1;
+}
 
 .container {
     width: 80%;
@@ -75,22 +85,3 @@ button:hover {
     background-color: #d4549a;
 }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-  footer a {
-    color: #ff66b2;
-    text-decoration: none;
-    margin: 0 10px;
-    
-}
-  
-  footer a:hover {
-    text-decoration: underline;
-    
-}
