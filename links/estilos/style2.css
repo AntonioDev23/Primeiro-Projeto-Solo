@@ -104,9 +104,17 @@ section > div > p {
   color: var(--cor-4);
 }
 
+.preco-kit {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-5);
+    margin: 15px 0;
+}
+
 .titulo {
   width: 500px;
-  height: 450px;
+  min-height: 450px;
+  height: auto;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -281,7 +289,8 @@ text-decoration: underline;
   
   .titulo {
     width: 400px;
-    height: 300px;
+    min-height: 300px;
+    height: auto;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
