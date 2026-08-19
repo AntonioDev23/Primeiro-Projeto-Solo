@@ -1,24 +1,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    const menu = document.getElementById("menu");
-    const hamburger = document.querySelector(".hamburger");
     const newsletterBtn = document.getElementById("newsletter-btn");
     const modal = document.getElementById("newsletter-modal");
     const closeBtn = document.querySelector(".close");
+    console.log("SCRIPT.JS CARREGOU");
     const newsletterForm = document.getElementById("newsletter-form");
     const successMessage = document.getElementById("success-message");
 
-    // Alterna o menu visível com animação
-    hamburger.addEventListener("click", () => {
-        menu.classList.toggle("menu-visivel");
-    });
-
-    // Fecha o menu ao clicar fora dele
-    document.addEventListener("click", (e) => {
-        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-            menu.classList.remove("menu-visivel");
-        }
-    });
+    console.log("NEWSLETTER ENCONTRADA:", newsletterBtn);
+    console.log("MODAL ENCONTRADO:", modal);
 
     // Abre o modal da newsletter
     newsletterBtn.addEventListener("click", (e) => {
