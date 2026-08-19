@@ -23,24 +23,6 @@ body {
   background-color: #f4f4f4;
 }
 
-/* =========================
-   HEADER
-========================= */
-
-header {
-  background-color: var(--cor-1);
-  color: white;
-  text-align: center;
-  padding: 37px;
-  height: 110px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 25px;
-  margin-top: -40px;
-  margin-left: 30px;
-}
 
 .logo {
   font-family: 'Great Vibes', cursive;

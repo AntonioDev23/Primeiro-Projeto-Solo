@@ -14,26 +14,25 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 0;
+    min-height: 100%;
+}
+
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
-header {
-    background-color: var(--cor-1);
-    color: #fff;
-    height: 120px;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.5em;
-    font-family: "Protest Revolution", sans-serif;
-    
+main {
+    flex: 1;
 }
-
 
 #menu {
     display: flex; /* O menu será exibido lado a lado */
@@ -267,24 +266,4 @@ main section h2 {
     display: none;
 }
 
-
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-  footer a {
-    color: #ff66b2;
-    text-decoration: none;
-    margin: 0 10px;
-    
-}
-  
-  footer a:hover {
-    text-decoration: underline;
-    
-}
 
