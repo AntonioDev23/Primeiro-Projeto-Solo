@@ -50,23 +50,6 @@ header h1 {
   margin-top: -25px;
 }
 
-.btn {
-  position: absolute;
-  top: 10px;
-  left: 5px;
-  padding: 5px;
-  background-color: white;
-  color: rgb(88, 28, 70);
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 9px;
-  font-weight: bolder;
-  transition: transform 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-5px);
-}
 
 /* =========================
    CARD PRINCIPAL DO KIT
@@ -222,97 +205,10 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
-@media (max-width: 768px) {
-
-  header {
-    height: 80px;
-    padding: 37px;
-  }
-
-  header h1 {
-    font-size: 13px;
-    font-weight: bolder;
-    text-align: center;
-    height: 20px;
-    margin-left: 90px;
-    margin-top: -20px;
-  }
-
-  .logo {
-    font-size: 13px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-  }
-
-  .btn {
-    top: 10px;
-    left: 5px;
-    padding: 2px;
-    font-size: 8px;
-  }
-
-  /* Card principal */
-
-  .titulo {
-    width: 90%;
-    min-height: 300px;
-    padding: 10px;
-  }
-
-  .titulo img {
-    max-width: 80%;
-    height: 190px;
-  }
-
-  .titulo h3 {
-    font-size: 0.8rem;
-  }
-
-  .titulo > p {
-    font-size: 0.7rem;
-  }
-
-  .titulo > p.preco-kit {
-    font-size: 1.5rem;
-    margin: 15px 0;
-  }
-
-  /* Produtos */
-
-  .kit-container {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    gap: 20px;
-  }
-
-  .item {
-    width: 90%;
-    height: auto;
-    min-height: 250px;
-    margin: auto;
-  }
-
-  .item h3 {
-    font-size: 0.9rem;
-  }
-
-  .item p {
-    font-size: 0.8rem;
-    line-height: 1.6;
-  }
-
-  .item strong {
-    font-size: 0.7rem;
-  }
-
   /* Botão */
 
   .botao-compra {
-    padding: 10px 18px;
+    padding: 20px 18px;
     font-size: 0.9rem;
   }
 
@@ -325,4 +221,3 @@ footer a:hover {
   footer a {
     font-size: 0.9rem;
   }
-}

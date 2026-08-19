@@ -1,5 +1,11 @@
 fetch("http://localhost:3000/produtos")
-    .then(resposta => resposta.json())
+    .then(resposta => {
+        if (!resposta.ok) {
+            throw new Error("Erro ao buscar produtos");
+        }
+
+        return resposta.json();
+    })
     .then(produtos => {
 
         const listaProdutos = document.getElementById("lista-produtos");
@@ -8,20 +14,18 @@ fetch("http://localhost:3000/produtos")
         produtos.forEach(produto => {
 
             const div = document.createElement("div");
-            
-            if (produto.secao === "destaque") {
-                div.classList.add("produto");
-            }
 
-            if (produto.secao === "novidade") {
-                div.classList.add("novidade");
-            }
+            div.classList.add(
+                produto.secao === "destaque"
+                    ? "produto"
+                    : "novidade"
+            );
 
             div.innerHTML = `
                 <img src="${produto.imagem}" alt="${produto.nome}">
                 <h3>${produto.nome}</h3>
-                <p>R$ ${produto.preco}</p>
-                <a href="produto.html?id=${produto.id}" class="btn">Ver Detalhes</a>
+                <p>R$ ${Number(produto.preco).toFixed(2)}</p>
+                <a href="${produto.link}" class="btn">Ver Detalhes</a>
             `;
 
             if (produto.secao === "destaque") {
