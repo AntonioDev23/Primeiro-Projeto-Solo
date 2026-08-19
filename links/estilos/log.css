@@ -112,35 +112,4 @@ body {
     transform: translateY(-3px);
 }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
 
-  footer a {
-    color: #ff66b2;
-    text-decoration: none;
-    margin: 0 10px;
-    
-}
-  
-  footer a:hover {
-    text-decoration: underline;
-    
-}
-
-/* Estilo para dispositivos móveis */
-@media (max-width: 767px) {
-    .cadastro {
-        max-width: 400px;
-        margin: 50px auto;
-        padding: 20px;
-        background-color:  #ffb6c1;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        font-family: 'Arial', sans-serif;
-    }
-}

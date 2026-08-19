@@ -182,26 +182,7 @@ section > div > p.preco-kit {
   
 }
 
-  /* Rodapé */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  }
   
-  footer  a {
-  color: #ff66b2;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 0.9em;
-  }
-  
-  footer a:hover {
-  text-decoration: underline;
-  
-  }
 
   
 

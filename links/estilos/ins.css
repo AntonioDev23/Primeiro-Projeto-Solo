@@ -93,38 +93,3 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-  footer a {
-    color: #ff66b2;
-    text-decoration: none;
-    margin: 0 10px;
-    
-}
-  
-  footer a:hover {
-    text-decoration: underline;
-    
-}
-
-  /* Estilo para dispositivos móveis */
-  @media (max-width: 767px) {
-    
-    .formulario-inscricao {
-        max-width: 400px;
-        margin: 50px auto;
-        padding: 20px;
-        background-color: var(--cor-5);
-        color: white;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center; 
-    }
-    
-  }

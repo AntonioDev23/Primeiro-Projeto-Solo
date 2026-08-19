@@ -75,23 +75,3 @@
   
 
 
-/* Rodapé */
-footer {
-    bottom: 50%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-  footer a {
-    color: #ff66b2;
-    text-decoration: none;
-    margin: 0 10px;
-    
-}
-  
-  footer a:hover {
-    text-decoration: underline;
-    
-}
