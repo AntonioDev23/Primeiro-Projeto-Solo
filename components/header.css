@@ -63,3 +63,87 @@ header nav {
     font-size: 16px;
     font-weight: bold;
 }
+
+/* ==========================================
+   MENU DO USUÁRIO
+   ========================================== */
+
+.usuario-menu {
+    position: relative;
+}
+
+
+/* Botão com nome do usuário */
+
+.usuario-botao {
+    background: none;
+    border: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    line-height: normal;
+}
+
+
+
+/* Seta */
+
+.usuario-botao .fa-chevron-down {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+
+/* Menu suspenso */
+
+.usuario-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    min-width: 210px;
+    background-color: #520447;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+
+/* Links do menu */
+
+.usuario-dropdown a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+/* Ícones */
+
+.usuario-dropdown a i {
+    width: 20px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+
+/* Hover */
+
+.usuario-dropdown a:hover {
+    background-color: #d4549a;
+}
+
+
+/* Aparece ao passar o mouse */
+
+.usuario-menu:hover .usuario-dropdown {
+    display: block;
+}
