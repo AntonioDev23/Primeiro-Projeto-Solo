@@ -16,6 +16,9 @@ app.use(cors());
 const produtoRoutes = require("./routes/produtoRoutes");
 app.use(produtoRoutes);
 
+const usuarioRoutes = require("./routes/usuarioRoutes");
+app.use(usuarioRoutes);
+
 // Página inicial
 app.get("/", (req, res) => {
     res.send("Olá, mundo!");
