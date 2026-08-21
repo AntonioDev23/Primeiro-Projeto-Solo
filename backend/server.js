@@ -16,6 +16,7 @@ app.use(cors());
 const produtoRoutes = require("./routes/produtoRoutes");
 app.use(produtoRoutes);
 
+// Importa as rotas de usuários
 const usuarioRoutes = require("./routes/usuarioRoutes");
 app.use(usuarioRoutes);
 

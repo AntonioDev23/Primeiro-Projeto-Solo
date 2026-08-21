@@ -59,3 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
         successMessage.classList.add("hidden");
     }
 });
+
+const usuarioLogado = JSON.parse(
+    localStorage.getItem("usuarioLogado")
+);
+
+if (usuarioLogado) {
+    console.log("Usuário logado:", usuarioLogado.nome);
+}
