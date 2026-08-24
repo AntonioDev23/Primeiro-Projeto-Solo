@@ -1,12 +1,19 @@
 
+/* ==========================================
+   HEADER
+   ========================================== */
+
 header {
-    background-color: #d4549a;
-    color: white;
-    height: 100px;
+    background-color: #ffffff;
+    color: #520447;
+    height: 82px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
 }
 
 header .logo {
@@ -14,13 +21,19 @@ header .logo {
     left: 30px;
     font-size: 30px;
     font-family: 'Great Vibes', cursive;
-    color: white;
+    color: #520447;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .logo:hover {
+    color: #d4549a;
 }
 
 header h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 28px;
+    color: #520447;
 }
 
 header nav {
@@ -42,27 +55,33 @@ header nav {
 }
 
 #menu li {
-    margin: 0 10px;
-    padding: 10px 20px;
+    margin: 0 4px;
+    padding: 10px 14px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 #menu li:hover {
-    background-color: #ff69b4;
-    color: white;
+    background-color: transparent;
+    color: #d4549a;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+    box-shadow: none;
+    transform: none;
 }
 
 #menu li a {
-    color: white;
+    color: #520447;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
+
+#menu li a:hover {
+    color: #d4549a;
+}
+
 
 /* ==========================================
    MENU DO USUÁRIO
@@ -72,61 +91,59 @@ header nav {
     position: relative;
 }
 
-
-/* Botão com nome do usuário */
-
 .usuario-botao {
     background: none;
     border: none;
-    color: white;
+    color: #520447;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 14px;
     line-height: normal;
+    transition: color 0.3s ease;
 }
 
-
-
-/* Seta */
+.usuario-botao:hover {
+    color: #d4549a;
+}
 
 .usuario-botao .fa-chevron-down {
-    font-size: 12px;
+    font-size: 11px;
     margin-left: 5px;
 }
 
 
-/* Menu suspenso */
+/* ==========================================
+   DROPDOWN DO USUÁRIO
+   ========================================== */
 
 .usuario-dropdown {
     display: none;
     position: absolute;
     right: 0;
     top: 100%;
-    min-width: 210px;
-    background-color: #520447;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    min-width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    z-index: 1000;
+    z-index: 9999;
 }
-
-
-/* Links do menu */
 
 .usuario-dropdown a {
     display: block;
-    padding: 12px 15px;
-    color: white;
+    padding: 13px 16px;
+    color: #520447;
+    background-color: #ffffff;
     text-decoration: none;
     text-align: left;
-    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     font-weight: normal;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
-
-
-/* Ícones */
 
 .usuario-dropdown a i {
     width: 20px;
@@ -134,15 +151,10 @@ header nav {
     text-align: center;
 }
 
-
-/* Hover */
-
 .usuario-dropdown a:hover {
-    background-color: #d4549a;
+    background-color: #f8e8f2;
+    color: #d4549a;
 }
-
-
-/* Aparece ao passar o mouse */
 
 .usuario-menu:hover .usuario-dropdown {
     display: block;

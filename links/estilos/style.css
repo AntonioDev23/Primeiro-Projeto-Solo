@@ -79,7 +79,7 @@ Body {
 }
 
 .produtos-destaque h2 {
-    color: var(--cor-5);
+    color: #d4549a;
     font-size: 28px;
     margin-bottom: 20px;
 }
