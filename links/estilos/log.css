@@ -21,6 +21,7 @@ body {
 }
 
 .cadastro {
+    position: relative;
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -39,6 +40,22 @@ body {
     text-align: center;
     color: var(--cor-5);
     margin-bottom: 20px;
+}
+
+.fechar-formulario {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #666;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.fechar-formulario:hover {
+    color: #d4549a;
 }
 
 .especial {

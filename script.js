@@ -29,9 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Prepara o conteúdo da Newsletter
     function prepararNewsletter() {
 
+        // Limpa mensagens anteriores
+        successMessage.classList.add("hidden");
+        newsletterForm.classList.remove("hidden");
+
         if (usuarioLogado) {
 
-            // Usuário está logado
             newsletterVisitante.classList.add("hidden");
             newsletterLogado.classList.remove("hidden");
 
@@ -40,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else {
 
-            // Usuário não está logado
             newsletterVisitante.classList.remove("hidden");
             newsletterLogado.classList.add("hidden");
 
@@ -69,11 +71,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let email;
 
-        // Se estiver logado, usa o e-mail da conta
+        // Usuário logado
         if (usuarioLogado) {
 
             if (!aceitarOfertas.checked) {
-                alert("Marque a opção para aceitar receber ofertas e novidades.");
+                successMessage.textContent =
+                    "Marque a opção para aceitar receber ofertas e novidades.";
+                successMessage.classList.remove("hidden");
+
+                setTimeout(() => {
+                    resetForm();
+                    modal.style.display = "none";
+                }, 2000);
+
                 return;
             }
 
@@ -81,8 +91,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else {
 
-            // Se não estiver logado, pega o e-mail digitado
-            email = document.getElementById("email").value;
+            // Usuário não logado
+            email = document.getElementById("email").value.trim();
+
+            if (!email) {
+                successMessage.textContent =
+                    "Digite seu e-mail para continuar.";
+                successMessage.classList.remove("hidden");
+
+                setTimeout(() => {
+                    resetForm();
+                    modal.style.display = "none";
+                }, 2000);
+
+                return;
+            }
         }
 
         try {
@@ -100,28 +123,56 @@ document.addEventListener("DOMContentLoaded", () => {
             const dados = await resposta.json();
 
             // E-mail já cadastrado
-            if (resposta.status === 409) {
-                alert(dados.mensagem);
-                return;
-            }
+           if (resposta.status === 409) {
+
+                newsletterForm.classList.add("hidden");
+
+                successMessage.textContent =
+                    dados.mensagem;
+
+                successMessage.style.color = "#d4549a";
+
+                successMessage.classList.remove("hidden");
+
+                setTimeout(() => {
+                    resetForm();
+                    modal.style.display = "none";
+                }, 2000);
+
+            return;
+    }
 
             // Outro erro
             if (!resposta.ok) {
-                alert(dados.mensagem);
+
+                newsletterForm.classList.add("hidden");
+
+                successMessage.textContent =
+                    dados.mensagem;
+
+                successMessage.classList.remove("hidden");
+
+                setTimeout(() => {
+                    resetForm();
+                    modal.style.display = "none";
+                }, 2000);
+
                 return;
             }
 
-            // Sucesso
+            // Inscrição realizada
             newsletterForm.classList.add("hidden");
 
-            successMessage.textContent = dados.mensagem;
+            successMessage.textContent =
+                dados.mensagem;
+
             successMessage.classList.remove("hidden");
 
-            // Fecha depois de 3 segundos
+            // Fecha depois de 2 segundos
             setTimeout(() => {
                 resetForm();
                 modal.style.display = "none";
-            }, 3000);
+            }, 2000);
 
         } catch (erro) {
 
@@ -130,7 +181,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 erro
             );
 
-            alert("Não foi possível conectar ao servidor.");
+            newsletterForm.classList.add("hidden");
+
+            successMessage.textContent =
+                "Não foi possível conectar ao servidor.";
+
+            successMessage.classList.remove("hidden");
+
+            setTimeout(() => {
+                resetForm();
+                modal.style.display = "none";
+            }, 2000);
         }
     });
 

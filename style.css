@@ -283,3 +283,8 @@ main section h2 {
 #newsletter-form button:hover {
     background-color: var(--cor-5);
 }
+
+
+.hidden {
+    display: none;
+}
