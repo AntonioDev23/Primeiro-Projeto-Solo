@@ -20,6 +20,9 @@ app.use(produtoRoutes);
 const usuarioRoutes = require("./routes/usuarioRoutes");
 app.use(usuarioRoutes);
 
+const newsletterRoutes = require("./routes/newsletterRoutes");
+app.use(newsletterRoutes);
+
 // Página inicial
 app.get("/", (req, res) => {
     res.send("Olá, mundo!");

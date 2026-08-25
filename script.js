@@ -3,18 +3,51 @@ document.addEventListener("DOMContentLoaded", () => {
     const newsletterBtn = document.getElementById("newsletter-btn");
     const modal = document.getElementById("newsletter-modal");
     const closeBtn = document.querySelector(".close");
-    console.log("SCRIPT.JS CARREGOU");
     const newsletterForm = document.getElementById("newsletter-form");
     const successMessage = document.getElementById("success-message");
+    const newsletterVisitante = document.getElementById("newsletter-visitante");
+    const newsletterLogado = document.getElementById("newsletter-logado");
+    const newsletterText = document.getElementById("newsletter-text");
+    const aceitarOfertas = document.getElementById("aceitar-ofertas");
 
-    console.log("NEWSLETTER ENCONTRADA:", newsletterBtn);
-    console.log("MODAL ENCONTRADO:", modal);
+    console.log("SCRIPT.JS CARREGOU");
 
-    // Abre o modal da newsletter
+    // Recupera o usuário logado
+    const usuarioLogado = JSON.parse(
+        localStorage.getItem("usuarioLogado")
+    );
+
+    // Abre o modal
     newsletterBtn.addEventListener("click", (e) => {
         e.preventDefault();
+
+        prepararNewsletter();
+
         modal.style.display = "flex";
     });
+
+    // Prepara o conteúdo da Newsletter
+    function prepararNewsletter() {
+
+        if (usuarioLogado) {
+
+            // Usuário está logado
+            newsletterVisitante.classList.add("hidden");
+            newsletterLogado.classList.remove("hidden");
+
+            newsletterText.textContent =
+                `Olá, ${usuarioLogado.nome}! Você deseja receber ofertas e novidades da ARSN?`;
+
+        } else {
+
+            // Usuário não está logado
+            newsletterVisitante.classList.remove("hidden");
+            newsletterLogado.classList.add("hidden");
+
+            newsletterText.textContent =
+                "Receba promoções e novidades da ARSN.";
+        }
+    }
 
     // Fecha o modal
     closeBtn.addEventListener("click", () => {
@@ -22,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         resetForm();
     });
 
-    // Fecha o modal ao clicar fora dele
+    // Fecha ao clicar fora
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
@@ -30,40 +63,93 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Envia o formulário
-    newsletterForm.addEventListener("submit", (e) => {
+    // Envia a Newsletter
+    newsletterForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        // Simula o envio dos dados (aqui você pode adicionar uma requisição AJAX)
-        const nome = document.getElementById("nome").value;
-        const email = document.getElementById("email").value;
+        let email;
 
-        console.log("Nome:", nome);
-        console.log("E-mail:", email);
+        // Se estiver logado, usa o e-mail da conta
+        if (usuarioLogado) {
 
-        // Exibe a mensagem de sucesso
-        newsletterForm.classList.add("hidden");
-        successMessage.classList.remove("hidden");
+            if (!aceitarOfertas.checked) {
+                alert("Marque a opção para aceitar receber ofertas e novidades.");
+                return;
+            }
 
-        // Limpa o formulário após 3 segundos
-        setTimeout(() => {
-            resetForm();
-            modal.style.display = "none";
-        }, 3000);
+            email = usuarioLogado.email;
+
+        } else {
+
+            // Se não estiver logado, pega o e-mail digitado
+            email = document.getElementById("email").value;
+        }
+
+        try {
+
+            const resposta = await fetch("http://localhost:3000/newsletter", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email
+                })
+            });
+
+            const dados = await resposta.json();
+
+            // E-mail já cadastrado
+            if (resposta.status === 409) {
+                alert(dados.mensagem);
+                return;
+            }
+
+            // Outro erro
+            if (!resposta.ok) {
+                alert(dados.mensagem);
+                return;
+            }
+
+            // Sucesso
+            newsletterForm.classList.add("hidden");
+
+            successMessage.textContent = dados.mensagem;
+            successMessage.classList.remove("hidden");
+
+            // Fecha depois de 3 segundos
+            setTimeout(() => {
+                resetForm();
+                modal.style.display = "none";
+            }, 3000);
+
+        } catch (erro) {
+
+            console.error(
+                "Erro ao cadastrar na Newsletter:",
+                erro
+            );
+
+            alert("Não foi possível conectar ao servidor.");
+        }
     });
 
-    // Função para resetar o formulário
+    // Reseta o formulário
     function resetForm() {
+
         newsletterForm.reset();
+
         newsletterForm.classList.remove("hidden");
+
         successMessage.classList.add("hidden");
+
+        newsletterVisitante.classList.remove("hidden");
+        newsletterLogado.classList.add("hidden");
+    }
+
+    // Mostra no console se existe usuário logado
+    if (usuarioLogado) {
+        console.log("Usuário logado:", usuarioLogado.nome);
+        console.log("E-mail:", usuarioLogado.email);
     }
 });
-
-const usuarioLogado = JSON.parse(
-    localStorage.getItem("usuarioLogado")
-);
-
-if (usuarioLogado) {
-    console.log("Usuário logado:", usuarioLogado.nome);
-}

@@ -53,13 +53,34 @@
 <div id="newsletter-modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
+
         <h3>Inscreva-se na Newsletter</h3>
+
+        <p id="newsletter-text">
+            Receba promoções e novidades da ARSN.
+        </p>
+
         <form id="newsletter-form">
-            <input type="text" id="nome" placeholder="Seu nome" required>
-            <input type="email" id="email" placeholder="Seu e-mail" required>
-            <button type="submit">Enviar</button>
+
+            <!-- Aparece apenas para visitantes -->
+            <div id="newsletter-visitante">
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+            </div>
+
+            <!-- Aparece apenas para usuários logados -->
+            <div id="newsletter-logado" class="hidden">
+                <label>
+                    <input type="checkbox" id="aceitar-ofertas">
+                    Aceito receber ofertas, promoções e novidades por e-mail.
+                </label>
+            </div>
+
+            <button type="submit">Inscrever-se</button>
         </form>
-        <p id="success-message" class="hidden">Inscrição realizada com sucesso! 🎉</p>
+
+        <p id="success-message" class="hidden">
+            Inscrição realizada com sucesso! 🎉
+        </p>
     </div>
 </div>
 
