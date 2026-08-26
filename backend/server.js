@@ -23,6 +23,9 @@ app.use(usuarioRoutes);
 const newsletterRoutes = require("./routes/newsletterRoutes");
 app.use(newsletterRoutes);
 
+const carrinhoRoutes = require("./routes/carrinhoRoutes");
+app.use(carrinhoRoutes);
+
 // Página inicial
 app.get("/", (req, res) => {
     res.send("Olá, mundo!");

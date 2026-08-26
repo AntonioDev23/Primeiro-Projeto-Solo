@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Carrinho</title>
+
+    <link rel="stylesheet" href="estilos/carrinho.css">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+
+    <main>
+
+        <section class="carrinho">
+
+            <h2>Meu Carrinho</h2>
+
+            <div id="lista-carrinho">
+
+                <!-- Produtos serão carregados pelo JavaScript -->
+
+            </div>
+
+
+            <div class="carrinho-vazio hidden" id="carrinho-vazio">
+
+                <i class="fas fa-shopping-cart"></i>
+
+                <p>Seu carrinho está vazio.</p>
+
+            </div>
+
+
+            <div class="resumo-carrinho">
+
+                <strong>Total:</strong>
+
+                <span id="total-carrinho">
+                    R$ 0,00
+                </span>
+
+                <button type="button" id="btn-finalizar">
+                    Finalizar compra
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div id="footer"></div>
+
+
+    <script
+        type="module"
+        src="../components/componentes.js">
+    </script>
+
+    <script src="carrinho.js"></script>
+
+</body>
+
+</html>
