@@ -191,3 +191,21 @@ main {
     display: none;
 }
 
+.hamburger {
+    display: none;
+}
+
+.mensagem-perfil-status {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.mensagem-perfil-status.sucesso {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}

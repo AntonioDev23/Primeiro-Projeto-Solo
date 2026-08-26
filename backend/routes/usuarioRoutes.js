@@ -13,5 +13,8 @@ router.post("/usuarios", usuarioController.cadastrarUsuario);
 // Faz login do usuário
 router.post("/login", usuarioController.loginUsuario);
 
+// Atualiza os dados do perfil
+router.put("/usuarios/perfil", usuarioController.atualizarPerfil);
+
 // Exporta as rotas
 module.exports = router;

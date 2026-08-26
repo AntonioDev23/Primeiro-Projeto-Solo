@@ -122,9 +122,69 @@ const loginUsuario = async (req, res) => {
     }
 };
 
+// Atualiza os dados do perfil
+const atualizarPerfil = async (req, res) => {
+    try {
+        const {
+            id,
+            nome,
+            telefone,
+            nascimento,
+            genero
+        } = req.body;
+
+        // Verifica os campos obrigatórios
+        if (!id || !nome || !telefone || !nascimento || !genero) {
+            return res.status(400).json({
+                mensagem: "Todos os campos são obrigatórios."
+            });
+        }
+
+        // Atualiza o usuário no banco
+        const resultado = await pool.query(
+            `UPDATE usuarios
+             SET nome = $1,
+                 telefone = $2,
+                 nascimento = $3,
+                 genero = $4
+             WHERE id = $5
+             RETURNING id, nome, email, telefone, nascimento, genero, criado_em`,
+            [
+                nome,
+                telefone,
+                nascimento,
+                genero,
+                id
+            ]
+        );
+
+        // Usuário não encontrado
+        if (resultado.rows.length === 0) {
+            return res.status(404).json({
+                mensagem: "Usuário não encontrado."
+            });
+        }
+
+        // Retorna os dados atualizados
+        res.status(200).json({
+            mensagem: "Perfil atualizado com sucesso!",
+            usuario: resultado.rows[0]
+        });
+
+    } catch (erro) {
+
+        console.error("Erro ao atualizar perfil:", erro);
+
+        res.status(500).json({
+            mensagem: "Erro ao atualizar perfil."
+        });
+    }
+};
+
 
 // Exporta os controllers
 module.exports = {
     cadastrarUsuario,
-    loginUsuario
+    loginUsuario,
+    atualizarPerfil
 };
