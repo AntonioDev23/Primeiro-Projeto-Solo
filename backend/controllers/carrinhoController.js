@@ -1,4 +1,3 @@
-
 // Importa a conexão com o banco
 const pool = require("../config/database");
 
@@ -13,7 +12,6 @@ const adicionarAoCarrinho = async (req, res) => {
 
         const { usuario_id, produto_id, quantidade } = req.body;
 
-        // Verifica os dados
         if (!usuario_id || !produto_id) {
 
             return res.status(400).json({
@@ -25,20 +23,14 @@ const adicionarAoCarrinho = async (req, res) => {
         const quantidadeAdicionar = quantidade || 1;
 
 
-        // ==========================================
-        // VERIFICA SE O CARRINHO EXISTE
-        // ==========================================
-
+        // Verifica se o carrinho existe
         let carrinho = await pool.query(
             "SELECT id FROM carrinhos WHERE usuario_id = $1",
             [usuario_id]
         );
 
 
-        // ==========================================
-        // CRIA O CARRINHO SE NÃO EXISTIR
-        // ==========================================
-
+        // Cria o carrinho se não existir
         let carrinhoId;
 
         if (carrinho.rows.length === 0) {
@@ -58,10 +50,7 @@ const adicionarAoCarrinho = async (req, res) => {
         }
 
 
-        // ==========================================
-        // VERIFICA SE O PRODUTO JÁ ESTÁ NO CARRINHO
-        // ==========================================
-
+        // Verifica se o produto já existe no carrinho
         const itemExistente = await pool.query(
             `SELECT id, quantidade
              FROM itens_carrinho
@@ -71,10 +60,7 @@ const adicionarAoCarrinho = async (req, res) => {
         );
 
 
-        // ==========================================
-        // SE JÁ EXISTE → AUMENTA A QUANTIDADE
-        // ==========================================
-
+        // Se já existe, aumenta a quantidade
         if (itemExistente.rows.length > 0) {
 
             const novaQuantidade =
@@ -92,10 +78,7 @@ const adicionarAoCarrinho = async (req, res) => {
 
         }
 
-        // ==========================================
-        // SE NÃO EXISTE → ADICIONA
-        // ==========================================
-
+        // Se não existe, adiciona
         else {
 
             await pool.query(
@@ -141,7 +124,6 @@ const listarCarrinho = async (req, res) => {
 
         const usuarioId = Number(req.params.usuarioId);
 
-
         const resultado = await pool.query(
             `SELECT
                 itens_carrinho.id,
@@ -159,7 +141,6 @@ const listarCarrinho = async (req, res) => {
              ORDER BY itens_carrinho.id`,
             [usuarioId]
         );
-
 
         res.status(200).json(resultado.rows);
 
@@ -180,10 +161,120 @@ const listarCarrinho = async (req, res) => {
 
 
 // ==========================================
+// ATUALIZAR QUANTIDADE DO PRODUTO
+// ==========================================
+
+const atualizarQuantidade = async (req, res) => {
+
+    try {
+
+        const itemId = Number(req.params.itemId);
+        const { quantidade } = req.body;
+
+
+        if (!quantidade || quantidade < 1) {
+
+            return res.status(400).json({
+                mensagem: "Quantidade inválida."
+            });
+        }
+
+
+        const resultado = await pool.query(
+            `UPDATE itens_carrinho
+             SET quantidade = $1
+             WHERE id = $2
+             RETURNING *`,
+            [
+                quantidade,
+                itemId
+            ]
+        );
+
+
+        if (resultado.rows.length === 0) {
+
+            return res.status(404).json({
+                mensagem: "Item não encontrado no carrinho."
+            });
+        }
+
+
+        res.status(200).json({
+            mensagem: "Quantidade atualizada!",
+            item: resultado.rows[0]
+        });
+
+
+    } catch (erro) {
+
+        console.error(
+            "Erro ao atualizar quantidade:",
+            erro
+        );
+
+        res.status(500).json({
+            mensagem: "Erro ao atualizar quantidade."
+        });
+    }
+};
+
+
+
+// ==========================================
+// REMOVER PRODUTO DO CARRINHO
+// ==========================================
+
+const removerDoCarrinho = async (req, res) => {
+
+    try {
+
+        const itemId = Number(req.params.itemId);
+
+
+        const resultado = await pool.query(
+            `DELETE FROM itens_carrinho
+             WHERE id = $1
+             RETURNING *`,
+            [itemId]
+        );
+
+
+        if (resultado.rows.length === 0) {
+
+            return res.status(404).json({
+                mensagem: "Item não encontrado no carrinho."
+            });
+        }
+
+
+        res.status(200).json({
+            mensagem: "Produto removido do carrinho!"
+        });
+
+
+    } catch (erro) {
+
+        console.error(
+            "Erro ao remover produto do carrinho:",
+            erro
+        );
+
+        res.status(500).json({
+            mensagem: "Erro ao remover produto do carrinho."
+        });
+    }
+};
+
+
+
+// ==========================================
 // EXPORTA
 // ==========================================
 
 module.exports = {
     adicionarAoCarrinho,
-    listarCarrinho
+    listarCarrinho,
+    atualizarQuantidade,
+    removerDoCarrinho
 };

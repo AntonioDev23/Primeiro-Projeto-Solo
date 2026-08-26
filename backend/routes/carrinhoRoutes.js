@@ -8,17 +8,46 @@ const router = express.Router();
 // Importa o controller do carrinho
 const carrinhoController = require("../controllers/carrinhoController");
 
-// Adiciona um produto ao carrinho
+
+// ==========================================
+// ADICIONAR AO CARRINHO
+// ==========================================
+
 router.post(
     "/carrinho",
     carrinhoController.adicionarAoCarrinho
 );
 
-// Lista o carrinho de um usuário
+
+// ==========================================
+// LISTAR CARRINHO
+// ==========================================
+
 router.get(
     "/carrinho/:usuarioId",
     carrinhoController.listarCarrinho
 );
+
+
+// ==========================================
+// ATUALIZAR QUANTIDADE
+// ==========================================
+
+router.put(
+    "/carrinho/item/:itemId",
+    carrinhoController.atualizarQuantidade
+);
+
+
+// ==========================================
+// REMOVER ITEM
+// ==========================================
+
+router.delete(
+    "/carrinho/item/:itemId",
+    carrinhoController.removerDoCarrinho
+);
+
 
 // Exporta as rotas
 module.exports = router;

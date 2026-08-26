@@ -1,0 +1,237 @@
+
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    flex: 1;
+}
+/* ==========================================
+   CARRINHO
+   ========================================== */
+
+.carrinho {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.carrinho h2 {
+    text-align: center;
+    color: #520447;
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   ITEM DO CARRINHO
+   ========================================== */
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.item-carrinho img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* ==========================================
+   INFORMAÇÕES DO PRODUTO
+   ========================================== */
+
+.info-produto {
+    flex: 1;
+}
+
+.info-produto h3 {
+    color: #520447;
+    margin-bottom: 8px;
+}
+
+.info-produto p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   QUANTIDADE
+   ========================================== */
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantidade span {
+    min-width: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #520447;
+}
+
+.quantidade button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d4549a;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quantidade button:hover {
+    background-color: #520447;
+}
+
+
+/* ==========================================
+   SUBTOTAL
+   ========================================== */
+
+.subtotal {
+    min-width: 120px;
+    text-align: right;
+    color: #520447;
+}
+
+
+/* ==========================================
+   BOTÃO REMOVER
+   ========================================== */
+
+.btn-remover {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f5d7e8;
+    color: #a00000;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-remover:hover {
+    background-color: #a00000;
+    color: white;
+}
+
+
+/* ==========================================
+   CARRINHO VAZIO
+   ========================================== */
+
+.carrinho-vazio {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.carrinho-vazio i {
+    font-size: 45px;
+    color: #d4549a;
+    margin-bottom: 15px;
+}
+
+.carrinho-vazio p {
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   RESUMO
+   ========================================== */
+
+.resumo-carrinho {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #eeeeee;
+}
+
+.resumo-carrinho strong {
+    font-size: 20px;
+    color: #520447;
+}
+
+#total-carrinho {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d4549a;
+}
+
+
+/* ==========================================
+   FINALIZAR COMPRA
+   ========================================== */
+
+#btn-finalizar {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: #d4549a;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#btn-finalizar:hover {
+    background-color: #520447;
+}
+
+
+/* ==========================================
+   HIDDEN
+   ========================================== */
+
+.hidden {
+    display: none;
+}
+
+
+/* ==========================================
+   MENU HAMBURGUER
+   ========================================== */
+
+.hamburger {
+    display: none;
+}
