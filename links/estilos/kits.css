@@ -107,7 +107,23 @@ body {
   background-color: #f9f9f9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 400px;
-  height: 260px;
+  height: 650px;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(216, 76, 153, 0.18);
+}
+
+.item img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 10px;
 }
 
 .item h3 {
@@ -129,7 +145,6 @@ body {
   color: var(--cor-2);
   text-decoration: underline;
 }
-
 /* =========================
    BOTÃO DE COMPRA
 ========================= */
@@ -163,6 +178,29 @@ body {
 .botao-compra:hover {
   color: white;
   transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.botao-carrinho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  background-color: var(--cor-5);
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.botao-carrinho:hover {
+  color: white;
+  transform: scale(1.08);
+  background-color: #6b0a5c;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
