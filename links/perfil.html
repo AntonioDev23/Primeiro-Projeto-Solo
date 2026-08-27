@@ -2,108 +2,367 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Meu Perfil</title>
 
     <link rel="stylesheet" href="estilos/perfil.css">
+
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        rel="stylesheet"
+    >
+
 </head>
+
 
 <body>
 
+
     <div id="header"></div>
 
+
     <main>
-            <section class="perfil">
+
+        <section class="perfil">
 
 
-                <div class="perfil-info">
+            <!-- ========================================== -->
+            <!-- INFORMAÇÕES DO PERFIL -->
+            <!-- ========================================== -->
 
-                    <div class="campo-perfil">
-                        <strong>Nome:</strong>
-                        <span id="perfil-nome"></span>
-                    </div>
+            <div class="perfil-info">
 
-                    <div class="campo-perfil">
-                        <strong>E-mail:</strong>
-                        <span id="perfil-email"></span>
-                    </div>
+                <div class="campo-perfil">
 
-                    <div class="campo-perfil">
-                        <strong>Telefone:</strong>
-                        <span id="perfil-telefone"></span>
-                    </div>
+                    <strong>Nome:</strong>
 
-                    <div class="campo-perfil">
-                        <strong>Data de nascimento:</strong>
-                        <span id="perfil-nascimento"></span>
-                    </div>
-
-                    <div class="campo-perfil">
-                        <strong>Gênero:</strong>
-                        <span id="perfil-genero"></span>
-                    </div>
-
-                    <p id="mensagem-perfil-status" class="mensagem-perfil-status hidden"></p>
+                    <span id="perfil-nome"></span>
 
                 </div>
 
-                <button type="button" id="btn-editar" class="btn-perfil">
-                    <i class="fas fa-edit"></i>
-                    Editar perfil
-                </button>
 
-                <form id="form-editar-perfil" class="form-editar hidden">
+                <div class="campo-perfil">
 
-                    <div class="campo-form">
-                        <label for="editar-nome">Nome:</label>
-                        <input type="text" id="editar-nome" required>
-                    </div>
+                    <strong>E-mail:</strong>
 
-                    <div class="campo-form">
-                        <label for="editar-telefone">Telefone:</label>
-                        <input type="tel" id="editar-telefone" required>
-                    </div>
+                    <span id="perfil-email"></span>
 
-                    <div class="campo-form">
-                        <label for="editar-nascimento">Data de nascimento:</label>
-                        <input type="date" id="editar-nascimento" required>
-                    </div>
+                </div>
 
-                    <div class="campo-form">
-                        <label for="editar-genero">Gênero:</label>
-                        <select id="editar-genero">
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                            <option value="outro">Outro</option>
-                            <option value="nao-declarado">Prefiro não declarar</option>
-                        </select>
-                    </div>
 
-                    <div class="acoes-form">
-                        <button type="submit" class="btn-salvar">
-                            Salvar alterações
-                        </button>
+                <div class="campo-perfil">
 
-                        <button type="button" id="btn-cancelar" class="btn-cancelar">
-                            Cancelar
-                        </button>
-                    </div>
+                    <strong>Telefone:</strong>
 
-                    <p id="mensagem-perfil"></p>
+                    <span id="perfil-telefone"></span>
 
-                </form>
+                </div>
 
-            </section>
+
+                <div class="campo-perfil">
+
+                    <strong>Data de nascimento:</strong>
+
+                    <span id="perfil-nascimento"></span>
+
+                </div>
+
+
+                <div class="campo-perfil">
+
+                    <strong>Gênero:</strong>
+
+                    <span id="perfil-genero"></span>
+
+                </div>
+
+
+                <!-- Mensagem geral do perfil -->
+
+                <p
+                    id="mensagem-perfil-status"
+                    class="mensagem-perfil-status hidden"
+                ></p>
+
+            </div>
+
+
+
+            <!-- ========================================== -->
+            <!-- BOTÃO EDITAR PERFIL -->
+            <!-- ========================================== -->
+
+            <button
+                type="button"
+                id="btn-editar"
+                class="btn-perfil"
+            >
+
+                <i class="fas fa-edit"></i>
+
+                Editar perfil
+
+            </button>
+
+
+
+            <!-- ========================================== -->
+            <!-- FORMULÁRIO EDITAR PERFIL -->
+            <!-- ========================================== -->
+
+            <form
+                id="form-editar-perfil"
+                class="form-editar hidden"
+            >
+
+
+                <div class="campo-form">
+
+                    <label for="editar-nome">
+                        Nome:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editar-nome"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="editar-telefone">
+                        Telefone:
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="editar-telefone"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="editar-nascimento">
+                        Data de nascimento:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="editar-nascimento"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="editar-genero">
+                        Gênero:
+                    </label>
+
+                    <select id="editar-genero">
+
+                        <option value="masculino">
+                            Masculino
+                        </option>
+
+                        <option value="feminino">
+                            Feminino
+                        </option>
+
+                        <option value="outro">
+                            Outro
+                        </option>
+
+                        <option value="nao-declarado">
+                            Prefiro não declarar
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="acoes-form">
+
+
+                    <button
+                        type="submit"
+                        class="btn-salvar"
+                    >
+
+                        Salvar alterações
+
+                    </button>
+
+
+
+                    <button
+                        type="button"
+                        id="btn-cancelar"
+                        class="btn-cancelar"
+                    >
+
+                        Cancelar
+
+                    </button>
+
+
+                </div>
+
+
+
+                <p id="mensagem-perfil"></p>
+
+
+            </form>
+
+
+
+            <!-- ========================================== -->
+            <!-- BOTÃO ALTERAR SENHA -->
+            <!-- ========================================== -->
+
+            <button
+                type="button"
+                id="btn-alterar-senha"
+                class="btn-perfil"
+            >
+
+                <i class="fas fa-lock"></i>
+
+                Alterar senha
+
+            </button>
+
+
+
+            <!-- ========================================== -->
+            <!-- FORMULÁRIO ALTERAR SENHA -->
+            <!-- ========================================== -->
+
+            <form
+                id="form-alterar-senha"
+                class="form-editar hidden"
+            >
+
+
+                <div class="campo-form">
+
+                    <label for="senha-atual">
+                        Senha atual:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha-atual"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="nova-senha">
+                        Nova senha:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="nova-senha"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="confirmar-senha">
+                        Confirmar nova senha:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmar-senha"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="acoes-form">
+
+
+                    <button
+                        type="submit"
+                        class="btn-salvar"
+                    >
+
+                        Alterar senha
+
+                    </button>
+
+
+
+                    <button
+                        type="button"
+                        id="btn-cancelar-senha"
+                        class="btn-cancelar"
+                    >
+
+                        Cancelar
+
+                    </button>
+
+
+                </div>
+
+
+
+                <p id="mensagem-senha"></p>
+
+
+            </form>
+
+
+        </section>
+
     </main>
+
+
 
     <div id="footer"></div>
 
-    <script type="module" src="../components/componentes.js"></script>
+
+
+    <script
+        type="module"
+        src="../components/componentes.js"
+    ></script>
+
     <script src="perfil.js"></script>
+
 
 </body>
 </html>

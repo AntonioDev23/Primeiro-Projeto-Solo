@@ -16,5 +16,8 @@ router.post("/login", usuarioController.loginUsuario);
 // Atualiza os dados do perfil
 router.put("/usuarios/perfil", usuarioController.atualizarPerfil);
 
+// Altera a senha do usuário
+router.put("/usuarios/senha", usuarioController.alterarSenha);
+
 // Exporta as rotas
 module.exports = router;

@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Finalizar pedido</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos/finalizar.css"
+    >
+
+    <link
+        rel="shortcut icon"
+        href="../favicon.ico"
+        type="image/x-icon"
+    >
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div id="header"></div>
+
+
+    <main>
+
+        <section class="finalizar">
+
+
+            <h1>Finalizar pedido</h1>
+
+
+            <!-- ========================================== -->
+            <!-- RESUMO DO PEDIDO -->
+            <!-- ========================================== -->
+
+            <div class="resumo-pedido">
+
+                <h2>Resumo do pedido</h2>
+
+                <div id="resumo-produtos"></div>
+
+                <div class="total-pedido">
+
+                    <strong>Total:</strong>
+
+                    <span id="total-pedido">
+                        R$ 0,00
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ========================================== -->
+            <!-- DADOS DE ENTREGA -->
+            <!-- ========================================== -->
+
+            <form id="form-finalizar">
+
+
+                <div class="dados-entrega">
+
+                    <h2>Dados de entrega</h2>
+
+
+                    <div class="campo-form">
+
+                        <label for="cidade">
+                            Cidade:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cidade"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo-form">
+
+                        <label for="endereco">
+                            Endereço:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="endereco"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo-form">
+
+                        <label for="numero">
+                            Número:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="numero"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo-form">
+
+                        <label for="complemento">
+                            Complemento:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="complemento"
+                            placeholder="Opcional"
+                        >
+
+                    </div>
+
+
+                    <div class="campo-form">
+
+                        <label for="telefone">
+                            Telefone:
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ========================================== -->
+                <!-- PAGAMENTO -->
+                <!-- ========================================== -->
+
+                <div class="pagamento">
+
+                    <h2>Forma de pagamento</h2>
+
+
+                    <div class="campo-form">
+
+                        <label for="forma-pagamento">
+                            Escolha uma opção:
+                        </label>
+
+                        <select
+                            id="forma-pagamento"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="pix">
+                                Pix
+                            </option>
+
+                            <option value="cartao">
+                                Cartão
+                            </option>
+
+                            <option value="dinheiro">
+                                Dinheiro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ========================================== -->
+                <!-- CONFIRMAR -->
+                <!-- ========================================== -->
+
+                <button
+                    type="submit"
+                    id="btn-confirmar-pedido"
+                    class="btn-confirmar"
+                >
+
+                    <i class="fas fa-check"></i>
+
+                    Confirmar pedido
+
+                </button>
+
+
+                <p
+                    id="mensagem-pedido"
+                    class="mensagem-pedido hidden"
+                ></p>
+
+
+            </form>
+
+
+        </section>
+
+    </main>
+
+
+    <div id="footer"></div>
+
+
+    <script
+        type="module"
+        src="../components/componentes.js"
+    ></script>
+
+    <script src="finalizar.js"></script>
+
+
+</body>
+
+</html>
