@@ -56,9 +56,16 @@ fetch(new URL("header.html", caminhoComponentes))
                                 Minhas compras
                             </a>
 
-                            <a href="/links/carrinho.html">
-                                <i class="fas fa-shopping-cart"></i>
-                                Carrinho
+                            <a href="/links/carrinho.html" class="link-carrinho">
+
+                            <i class="fas fa-shopping-cart"></i>
+
+                            Carrinho
+
+                            <span id="contador-carrinho" class="contador-carrinho hidden">
+                                0
+                            </span>
+
                             </a>
 
                             <a href="#" id="btn-sair">
@@ -70,6 +77,69 @@ fetch(new URL("header.html", caminhoComponentes))
 
                     </div>
                 `;
+
+            // ==========================================
+            // CONTADOR DO CARRINHO
+            // ==========================================
+
+            atualizarContadorCarrinho();
+
+
+            async function atualizarContadorCarrinho() {
+
+                try {
+
+                    const resposta = await fetch(
+                        `http://localhost:3000/carrinho/${usuarioLogado.id}`
+                    );
+
+                    if (!resposta.ok) {
+                        throw new Error("Erro ao buscar quantidade do carrinho.");
+                    }
+
+                    const produtos = await resposta.json();
+
+                    const contador =
+                        document.getElementById("contador-carrinho");
+
+                    if (!contador) {
+                        return;
+                    }
+
+                    let quantidadeTotal = 0;
+
+                    produtos.forEach(produto => {
+
+                        quantidadeTotal += Number(produto.quantidade);
+
+                    });
+
+
+                    if (quantidadeTotal > 0) {
+
+                        contador.textContent = quantidadeTotal;
+
+                        contador.classList.remove("hidden");
+
+                    } else {
+
+                        contador.textContent = "0";
+
+                        contador.classList.add("hidden");
+
+                    }
+
+                } catch (erro) {
+
+                    console.error(
+                        "Erro ao atualizar contador do carrinho:",
+                        erro
+                    );
+
+                }
+
+            }
+
 
                 // ==========================================
                 // BOTÃO SAIR

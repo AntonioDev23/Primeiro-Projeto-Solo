@@ -159,3 +159,32 @@ header nav {
 .usuario-menu:hover .usuario-dropdown {
     display: block;
 }
+
+/* ==========================================
+   CONTADOR DO CARRINHO
+   ========================================== */
+
+.contador-carrinho {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 20px;
+    height: 20px;
+
+    margin-left: 5px;
+
+    padding: 2px 6px;
+
+    background-color: red;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.contador-carrinho.hidden {
+    display: none;
+}

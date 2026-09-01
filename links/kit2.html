@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -167,48 +168,113 @@
 
 
             <div class="item">
-
                 <img src="Imagens/Shampoo a Seco.png" alt="Shampoo a Seco">
-
                 <h3>Shampoo a Seco</h3>
-
                 <p>
                     <strong>Benefícios:</strong>
                     Ideal para dar volume e frescor aos fios, absorvendo a oleosidade excessiva sem a necessidade de lavagem.
                 </p>
-
                 <p>
                     <strong>Modo de Uso:</strong>
                     Borrife o shampoo a seco diretamente na raiz do cabelo e massageie.
                     Penteie para remover o excesso.
                 </p>
-
                 <p>
                     <strong>Composição:</strong>
                     Amido de milho, talco, extrato de camomila.
                 </p>
-
             </div>
-
         </div>
 
 
-        <div class="container-botao">
+    <div class="container-botao">
+        <button type="button" id="btn-adicionar-carrinho" class="botao-carrinho">
+            <i class="fas fa-shopping-cart"></i>
+        </button>
+        <a href="comp.html?produto=Kit%20de%20Cuidados%20para%20Cabelos%20-%20Brilho%20e%20Maciez&preco=830.90"
+        class="botao-compra">
+            Comprar Agora
+        </a>
+    </div>
 
-            <a href="comp.html?produto=Kit%20de%20Cuidados%20para%20Cabelos%20-%20Brilho%20e%20Maciez&preco=830.90"
-               class="botao-compra">
-                Comprar Agora
-            </a>
-
-        </div>
-
-    </section>
+</section>
 
 
     <div id="footer"></div>
 
 
     <script type="module" src="../components/componentes.js"></script>
+    <script>
 
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const botaoCarrinho = document.getElementById("btn-adicionar-carrinho");
+
+        botaoCarrinho.addEventListener("click", async () => {
+
+            const usuarioSalvo = localStorage.getItem("usuarioLogado");
+
+            if (!usuarioSalvo) {
+
+                alert("Faça login para adicionar produtos ao carrinho.");
+
+                window.location.href = "log.html";
+
+                return;
+            }
+
+            const usuario = JSON.parse(usuarioSalvo);
+
+            try {
+
+                const resposta = await fetch(
+                    "http://localhost:3000/carrinho",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            usuario_id: usuario.id,
+                            produto_id: 8,
+                            quantidade: 1
+                        })
+                    }
+                );
+
+                const dados = await resposta.json();
+
+                if (!resposta.ok) {
+
+                    console.error(
+                        dados.mensagem ||
+                        "Não foi possível adicionar o produto ao carrinho."
+                    );
+
+                    return;
+                }
+
+                // ==========================================
+                // REDIRECIONA PARA O CARRINHO
+                // ==========================================
+
+                window.location.href = "carrinho.html";
+
+            } catch (erro) {
+
+                console.error(
+                    "Erro ao adicionar ao carrinho:",
+                    erro
+                );
+
+            }
+
+        });
+
+    });
+
+</script>
 </body>
 </html>
