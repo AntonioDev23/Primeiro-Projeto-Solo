@@ -87,12 +87,14 @@ Body {
 .produtos-destaque .produto {
     display: inline-block;
     width: 200px;
+    height: 360px;
     margin: 10px;
     text-align: center;
     background-color: #f4f4f4;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    vertical-align: top;
 }
 
 
@@ -193,7 +195,3 @@ Body {
     font-size: 18px;
     margin: 10px 0;
 }
-
-
-
-
