@@ -22,7 +22,10 @@ Body {
 }
 
 
-/* Banner promocional */
+/* ==========================================
+   BANNER PROMOCIONAL
+   ========================================== */
+
 .banner-promocional {
     background-color: #d4549a;
     color: white;
@@ -44,7 +47,9 @@ Body {
 }
 
 
-
+/* ==========================================
+   BOTÃO BT
+   ========================================== */
 
 .bt {
     position: absolute;
@@ -70,7 +75,10 @@ Body {
 }
 
 
-/* Seção de produtos em destaque */
+/* ==========================================
+   PRODUTOS EM DESTAQUE
+   ========================================== */
+
 .produtos-destaque {
     padding: 40px 20px;
     text-align: center;
@@ -84,102 +92,16 @@ Body {
     margin-bottom: 20px;
 }
 
-.produtos-destaque .produto {
-    display: inline-block;
-    width: 200px;
-    height: 360px;
-    margin: 10px;
-    text-align: center;
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    vertical-align: top;
-}
 
+/* ==========================================
+   NOVIDADES
+   ========================================== */
 
-/* Imagens dos produtos em destaque */
-.produtos-destaque .produto img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 5px;
-}
-
-
-.produtos-destaque .produto h3 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.produtos-destaque .produto p {
-    font-size: 16px;
-    color: var(--cor-5);
-}
-
-.produtos-destaque .produto .btn {
-    background-color: #ff66b2;
-    color: white;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.produtos-destaque .produto .btn:hover {
-    background-color: var(--cor-5);
-}
-
-
-/* Seção de novidades */
 .novidades {
     padding: 40px 20px;
     background-color: #f8f8f8;
     text-align: center;
     color: var(--cor-5);
-}
-
-.novidades .novidade {
-    display: inline-block;
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Imagens das novidades */
-.novidades .novidade img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 5px;
-}
-
-.novidades .novidade h3 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.novidades .novidade p {
-    font-size: 16px;
-    color: var(--cor-5);
-}
-
-.novidades .novidade .btn {
-    background-color: #ff66b2;
-    color: white;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.novidades .novidade .btn:hover {
-    background-color: var(--cor-5);
 }
 
 .novidades h2 {
@@ -194,4 +116,97 @@ Body {
 .novidades li {
     font-size: 18px;
     margin: 10px 0;
+}
+
+
+/* ==========================================
+   CARDS DOS PRODUTOS
+   ========================================== */
+
+.card-produto {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 200px;
+    height: 360px;
+
+    margin: 10px;
+    padding: 15px;
+
+    text-align: center;
+
+    background-color: #f4f4f4;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==========================================
+   IMAGEM DO PRODUTO
+   ========================================== */
+
+.card-produto img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: contain;
+
+    border-radius: 5px;
+}
+
+
+/* ==========================================
+   NOME DO PRODUTO
+   ========================================== */
+
+.card-produto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-produto p {
+    font-size: 16px;
+    color: var(--cor-5);
+
+    height: 24px;
+
+    margin-bottom: 5px;
+}
+
+
+/* ==========================================
+   BOTÃO VER DETALHES
+   ========================================== */
+
+.card-produto .btn {
+    display: inline-block;
+
+    background-color: #ff66b2;
+    color: white;
+
+    padding: 6px 12px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   HOVER DO BOTÃO
+   ========================================== */
+
+.card-produto .btn:hover {
+    background-color: var(--cor-5);
 }
