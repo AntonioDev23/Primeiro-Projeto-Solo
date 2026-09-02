@@ -206,3 +206,34 @@ cssFooter.rel = "stylesheet";
 cssFooter.href = new URL("footer.css", caminhoComponentes);
 
 document.head.appendChild(cssFooter);
+
+// ==========================================
+// BOTÕES
+// ==========================================
+
+fetch(new URL("botoes.html", caminhoComponentes))
+    .then(resposta => resposta.text())
+    .then(botoes => {
+
+        const elementoBotoes = document.getElementById("botoes");
+
+        if (elementoBotoes) {
+            elementoBotoes.innerHTML = botoes;
+        }
+    })
+    .catch(erro => {
+        console.error("Erro ao carregar os botões:", erro);
+    });
+
+
+// ==========================================
+// CSS DOS BOTÕES
+// ==========================================
+
+const cssBotoes = document.createElement("link");
+
+cssBotoes.rel = "stylesheet";
+
+cssBotoes.href = new URL("botoes.css", caminhoComponentes);
+
+document.head.appendChild(cssBotoes);

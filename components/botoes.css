@@ -1,0 +1,58 @@
+
+
+@charset "UTF-8";
+
+.container-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.botao-compra {
+    display: flex;
+    padding: 15px 30px;
+    background-color: var(--cor-3);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.botao-compra:hover {
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.botao-carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-color: var(--cor-5);
+    color: white;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.botao-carrinho:hover {
+    color: white;
+    transform: scale(1.08);
+    background-color: #6b0a5c;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}

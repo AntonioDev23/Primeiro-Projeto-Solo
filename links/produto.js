@@ -1,3 +1,4 @@
+
 // Pega os parâmetros que estão na URL
 const parametros = new URLSearchParams(window.location.search);
 
@@ -46,7 +47,7 @@ fetch(`http://localhost:3000/produtos/${id}`)
         document.querySelector("#produto-modo-uso").textContent =
             produto.modo_uso;
 
-            // Esconde o modo de uso quando o produto não possui essa informação
+        // Esconde o modo de uso quando o produto não possui essa informação
         if (!produto.modo_uso) {
             document.querySelector("#titulo-modo-uso").style.display = "none";
             document.querySelector("#produto-modo-uso").style.display = "none";
@@ -55,9 +56,105 @@ fetch(`http://localhost:3000/produtos/${id}`)
         // Coloca a composição na página
         document.querySelector("#produto-composicao").textContent =
             produto.composicao;
+
+
+        // ==========================================
+        // BOTÃO COMPRAR AGORA
+        // ==========================================
+
+        document.querySelector("#produto-link").href =
+            produto.link;
+
+
+        // ==========================================
+        // BOTÃO ADICIONAR AO CARRINHO
+        // ==========================================
+
+        const btnCarrinho =
+            document.querySelector("#btn-carrinho");
+
+        btnCarrinho.addEventListener("click", async () => {
+
+            // Verifica se existe usuário logado
+            const usuarioSalvo =
+                localStorage.getItem("usuarioLogado");
+
+            if (!usuarioSalvo) {
+
+                alert(
+                    "Faça login para adicionar produtos ao carrinho."
+                );
+
+                window.location.href = "log.html";
+
+                return;
+            }
+
+            // Recupera o usuário logado
+            const usuario =
+                JSON.parse(usuarioSalvo);
+
+
+            try {
+
+                const resposta = await fetch(
+                    "http://localhost:3000/carrinho",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            usuario_id: usuario.id,
+                            produto_id: produto.id,
+                            quantidade: 1
+                        })
+                    }
+                );
+
+
+                const dados = await resposta.json();
+
+
+                if (!resposta.ok) {
+
+                    alert(
+                        dados.mensagem ||
+                        "Não foi possível adicionar o produto ao carrinho."
+                    );
+
+                    return;
+                }
+
+
+                // Vai para o carrinho depois de adicionar
+                window.location.href = "carrinho.html";
+
+            } catch (erro) {
+
+                console.error(
+                    "Erro ao adicionar produto ao carrinho:",
+                    erro
+                );
+
+                alert(
+                    "Não foi possível conectar ao servidor."
+                );
+
+            }
+
+        });
+
     })
 
     // Mostra qualquer erro no console
     .catch(erro => {
-        console.error("Erro ao buscar produto:", erro);
+
+        console.error(
+            "Erro ao buscar produto:",
+            erro
+        );
+
     });

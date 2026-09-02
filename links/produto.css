@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 
 :root {
@@ -9,6 +10,7 @@
 }
 
 /* Configuração geral da página */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,8 +18,8 @@ body {
     background-color: #f4f4f4;
 }
 
-
 /* Botão voltar */
+
 .btn {
     position: absolute;
     top: 10px;
@@ -37,6 +39,7 @@ body {
 }
 
 /* Área principal do produto */
+
 .detalhes-produto {
     display: flex;
     flex-direction: column;
@@ -51,6 +54,7 @@ body {
 }
 
 /* Imagem do produto */
+
 .produto-imagem {
     max-width: 100%;
     width: auto;
@@ -61,12 +65,14 @@ body {
 }
 
 /* Área de descrição */
+
 .descricao {
     text-align: center;
     color: var(--cor-5);
 }
 
 /* Nome do produto */
+
 .descricao h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
@@ -74,6 +80,7 @@ body {
 }
 
 /* Preço do produto */
+
 #produto-preco {
     font-size: 1.8rem;
     font-weight: bold;
@@ -82,6 +89,7 @@ body {
 }
 
 /* Textos */
+
 .descricao p {
     font-size: 1rem;
     margin-bottom: 15px;
@@ -89,6 +97,7 @@ body {
 }
 
 /* Títulos das seções */
+
 .descricao h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -97,6 +106,7 @@ body {
 }
 
 /* Benefícios */
+
 #produto-beneficios {
     white-space: pre-line;
     font-size: 1rem;
@@ -104,19 +114,54 @@ body {
 }
 
 /* Modo de uso */
+
 #produto-modo-uso {
     white-space: pre-line;
 }
 
 /* Composição */
+
 #produto-composicao {
     line-height: 1.8;
 }
 
+/* Área dos botões */
+
+/* Área dos botões */
+
+.botoes-produto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Botão adicionar ao carrinho */
+
+.botao-carrinho {
+    padding: 15px 30px;
+    background-color: var(--cor-5);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.botao-carrinho:hover {
+    background-color: var(--cor-1);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
 /* Botão de compra */
+
 .botao-compra {
     display: inline-block;
-    margin-top: 20px;
     padding: 15px 30px;
     background-color: var(--cor-3);
     color: white;
@@ -136,4 +181,3 @@ body {
     transform: scale(1.05);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
-
