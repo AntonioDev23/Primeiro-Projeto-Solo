@@ -1,0 +1,94 @@
+
+@charset "UTF-8";
+
+:root {
+    --cor-1: #d4549a;
+    --cor-2: #ff69b4;
+    --cor-3: #fa1f0b;
+    --cor-4: #666;
+    --cor-5: #520447;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    flex: 1;
+}
+
+.compras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 40px 20px;
+}
+
+.compras-vazias {
+    width: 100%;
+    max-width: 700px;
+    padding: 50px 30px;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid var(--cor-1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(82, 4, 71, 0.2);
+}
+
+.icone-compras {
+    font-size: 4rem;
+    color: var(--cor-1);
+    margin-bottom: 20px;
+}
+
+.compras-vazias h2 {
+    color: var(--cor-5);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.compras-vazias p {
+    color: var(--cor-4);
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+.botoes-compras {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 25px;
+    background-color: var(--cor-1);
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.botao:hover {
+    background-color: var(--cor-5);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}

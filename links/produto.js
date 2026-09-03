@@ -59,91 +59,105 @@ fetch(`http://localhost:3000/produtos/${id}`)
 
 
         // ==========================================
-        // BOTÃO COMPRAR AGORA
+        // BOTÕES UNIVERSAIS
         // ==========================================
 
-        document.querySelector("#produto-link").href =
-            produto.link;
+        document.addEventListener("botoesCarregados", () => {
+
+            // ==========================================
+            // BOTÃO COMPRAR AGORA
+            // ==========================================
+
+            const botaoCompra =
+                document.querySelector("#produto-link");
+
+            botaoCompra.href = `comp.html?produto=${encodeURIComponent(produto.nome)}&preco=${produto.preco}`;
 
 
-        // ==========================================
-        // BOTÃO ADICIONAR AO CARRINHO
-        // ==========================================
+            // ==========================================
+            // BOTÃO ADICIONAR AO CARRINHO
+            // ==========================================
 
-        const btnCarrinho =
-            document.querySelector("#btn-carrinho");
-
-        btnCarrinho.addEventListener("click", async () => {
-
-            // Verifica se existe usuário logado
-            const usuarioSalvo =
-                localStorage.getItem("usuarioLogado");
-
-            if (!usuarioSalvo) {
-
-                alert(
-                    "Faça login para adicionar produtos ao carrinho."
-                );
-
-                window.location.href = "log.html";
-
-                return;
-            }
-
-            // Recupera o usuário logado
-            const usuario =
-                JSON.parse(usuarioSalvo);
+            const btnCarrinho =
+                document.querySelector("#btn-adicionar-carrinho");
 
 
-            try {
+            btnCarrinho.addEventListener("click", async () => {
 
-                const resposta = await fetch(
-                    "http://localhost:3000/carrinho",
-                    {
-                        method: "POST",
-
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-
-                        body: JSON.stringify({
-                            usuario_id: usuario.id,
-                            produto_id: produto.id,
-                            quantidade: 1
-                        })
-                    }
-                );
+                // Verifica se existe usuário logado
+                const usuarioSalvo =
+                    localStorage.getItem("usuarioLogado");
 
 
-                const dados = await resposta.json();
-
-
-                if (!resposta.ok) {
+                if (!usuarioSalvo) {
 
                     alert(
-                        dados.mensagem ||
-                        "Não foi possível adicionar o produto ao carrinho."
+                        "Faça login para adicionar produtos ao carrinho."
                     );
+
+                    window.location.href = "log.html";
 
                     return;
                 }
 
 
-                // Vai para o carrinho depois de adicionar
-                window.location.href = "carrinho.html";
+                // Recupera o usuário logado
+                const usuario =
+                    JSON.parse(usuarioSalvo);
 
-            } catch (erro) {
 
-                console.error(
-                    "Erro ao adicionar produto ao carrinho:",
-                    erro
-                );
+                try {
 
-                alert(
-                    "Não foi possível conectar ao servidor."
-                );
+                    const resposta = await fetch(
+                        "http://localhost:3000/carrinho",
+                        {
+                            method: "POST",
 
-            }
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify({
+                                usuario_id: usuario.id,
+                                produto_id: produto.id,
+                                quantidade: 1
+                            })
+                        }
+                    );
+
+
+                    const dados = await resposta.json();
+
+
+                    if (!resposta.ok) {
+
+                        alert(
+                            dados.mensagem ||
+                            "Não foi possível adicionar o produto ao carrinho."
+                        );
+
+                        return;
+                    }
+
+
+                    // Vai para o carrinho depois de adicionar
+                    window.location.href = "carrinho.html";
+
+
+                } catch (erro) {
+
+                    console.error(
+                        "Erro ao adicionar produto ao carrinho:",
+                        erro
+                    );
+
+                    alert(
+                        "Não foi possível conectar ao servidor."
+                    );
+
+                }
+
+            });
 
         });
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -168,37 +167,60 @@
 
 
             <div class="item">
+
                 <img src="Imagens/Shampoo a Seco.png" alt="Shampoo a Seco">
+
                 <h3>Shampoo a Seco</h3>
+
                 <p>
                     <strong>Benefícios:</strong>
                     Ideal para dar volume e frescor aos fios, absorvendo a oleosidade excessiva sem a necessidade de lavagem.
                 </p>
+
                 <p>
                     <strong>Modo de Uso:</strong>
                     Borrife o shampoo a seco diretamente na raiz do cabelo e massageie.
                     Penteie para remover o excesso.
                 </p>
+
                 <p>
                     <strong>Composição:</strong>
                     Amido de milho, talco, extrato de camomila.
                 </p>
+
             </div>
+
         </div>
 
 
-    <div id="botoes"></div>
+        <div id="botoes"></div>
 
-</section>
+    </section>
 
 
     <div id="footer"></div>
 
 
     <script type="module" src="../components/componentes.js"></script>
+
     <script>
 
     document.addEventListener("botoesCarregados", () => {
+
+        // ==========================================
+        // BOTÃO COMPRAR AGORA
+        // ==========================================
+
+        const botaoCompra =
+            document.getElementById("produto-link");
+
+        botaoCompra.href =
+            "comp.html?produto=Kit%20de%20Cuidados%20para%20Cabelos%20-%20Brilho%20e%20Maciez&preco=830.90";
+
+
+        // ==========================================
+        // BOTÃO ADICIONAR AO CARRINHO
+        // ==========================================
 
         const botaoCarrinho =
             document.getElementById("btn-adicionar-carrinho");
@@ -279,6 +301,7 @@
 
     });
 
-</script>
+    </script>
+
 </body>
 </html>
