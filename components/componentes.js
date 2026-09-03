@@ -78,67 +78,67 @@ fetch(new URL("header.html", caminhoComponentes))
                     </div>
                 `;
 
-            // ==========================================
-            // CONTADOR DO CARRINHO
-            // ==========================================
+                // ==========================================
+                // CONTADOR DO CARRINHO
+                // ==========================================
 
-            atualizarContadorCarrinho();
+                atualizarContadorCarrinho();
 
 
-            async function atualizarContadorCarrinho() {
+                async function atualizarContadorCarrinho() {
 
-                try {
+                    try {
 
-                    const resposta = await fetch(
-                        `http://localhost:3000/carrinho/${usuarioLogado.id}`
-                    );
+                        const resposta = await fetch(
+                            `http://localhost:3000/carrinho/${usuarioLogado.id}`
+                        );
 
-                    if (!resposta.ok) {
-                        throw new Error("Erro ao buscar quantidade do carrinho.");
+                        if (!resposta.ok) {
+                            throw new Error("Erro ao buscar quantidade do carrinho.");
+                        }
+
+                        const produtos = await resposta.json();
+
+                        const contador =
+                            document.getElementById("contador-carrinho");
+
+                        if (!contador) {
+                            return;
+                        }
+
+                        let quantidadeTotal = 0;
+
+                        produtos.forEach(produto => {
+
+                            quantidadeTotal += Number(produto.quantidade);
+
+                        });
+
+
+                        if (quantidadeTotal > 0) {
+
+                            contador.textContent = quantidadeTotal;
+
+                            contador.classList.remove("hidden");
+
+                        } else {
+
+                            contador.textContent = "0";
+
+                            contador.classList.add("hidden");
+
+                        }
+
+                    } catch (erro) {
+
+                        console.error(
+                            "Erro ao atualizar contador do carrinho:",
+                            erro
+                        );
+
                     }
-
-                    const produtos = await resposta.json();
-
-                    const contador =
-                        document.getElementById("contador-carrinho");
-
-                    if (!contador) {
-                        return;
-                    }
-
-                    let quantidadeTotal = 0;
-
-                    produtos.forEach(produto => {
-
-                        quantidadeTotal += Number(produto.quantidade);
-
-                    });
-
-
-                    if (quantidadeTotal > 0) {
-
-                        contador.textContent = quantidadeTotal;
-
-                        contador.classList.remove("hidden");
-
-                    } else {
-
-                        contador.textContent = "0";
-
-                        contador.classList.add("hidden");
-
-                    }
-
-                } catch (erro) {
-
-                    console.error(
-                        "Erro ao atualizar contador do carrinho:",
-                        erro
-                    );
 
                 }
-
-            }
 
 
                 // ==========================================
@@ -207,6 +207,7 @@ cssFooter.href = new URL("footer.css", caminhoComponentes);
 
 document.head.appendChild(cssFooter);
 
+
 // ==========================================
 // BOTÕES
 // ==========================================
@@ -218,7 +219,12 @@ fetch(new URL("botoes.html", caminhoComponentes))
         const elementoBotoes = document.getElementById("botoes");
 
         if (elementoBotoes) {
+
             elementoBotoes.innerHTML = botoes;
+
+            document.dispatchEvent(
+                new Event("botoesCarregados")
+            );
         }
     })
     .catch(erro => {

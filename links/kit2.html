@@ -198,24 +198,33 @@
     <script type="module" src="../components/componentes.js"></script>
     <script>
 
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("botoesCarregados", () => {
 
-        const botaoCarrinho = document.getElementById("btn-adicionar-carrinho");
+        const botaoCarrinho =
+            document.getElementById("btn-adicionar-carrinho");
+
 
         botaoCarrinho.addEventListener("click", async () => {
 
-            const usuarioSalvo = localStorage.getItem("usuarioLogado");
+            const usuarioSalvo =
+                localStorage.getItem("usuarioLogado");
+
 
             if (!usuarioSalvo) {
 
-                alert("Faça login para adicionar produtos ao carrinho.");
+                alert(
+                    "Faça login para adicionar produtos ao carrinho."
+                );
 
                 window.location.href = "log.html";
 
                 return;
             }
 
-            const usuario = JSON.parse(usuarioSalvo);
+
+            const usuario =
+                JSON.parse(usuarioSalvo);
+
 
             try {
 
@@ -236,7 +245,9 @@
                     }
                 );
 
+
                 const dados = await resposta.json();
+
 
                 if (!resposta.ok) {
 
@@ -247,6 +258,7 @@
 
                     return;
                 }
+
 
                 // ==========================================
                 // REDIRECIONA PARA O CARRINHO
