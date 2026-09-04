@@ -188,3 +188,7 @@ header nav {
 .contador-carrinho.hidden {
     display: none;
 }
+
+.hamburger {
+    display: none;
+}

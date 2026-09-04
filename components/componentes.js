@@ -243,3 +243,18 @@ cssBotoes.rel = "stylesheet";
 cssBotoes.href = new URL("botoes.css", caminhoComponentes);
 
 document.head.appendChild(cssBotoes);
+
+// ==========================================
+// MENU HAMBÚRGUER
+// ==========================================
+
+function toggleMenu() {
+
+    const menu = document.getElementById("menu");
+
+    if (!menu) {
+        return;
+    }
+
+    menu.classList.toggle("menu-visivel");
+}
