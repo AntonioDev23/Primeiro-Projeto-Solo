@@ -1,4 +1,4 @@
-// ==========================================
+/// ==========================================
 // HEADER
 // ==========================================
 
@@ -244,11 +244,25 @@ cssBotoes.href = new URL("botoes.css", caminhoComponentes);
 
 document.head.appendChild(cssBotoes);
 
+
+// ==========================================
+// CSS RESPONSIVO
+// ==========================================
+
+const cssResponsivo = document.createElement("link");
+
+cssResponsivo.rel = "stylesheet";
+
+cssResponsivo.href = new URL("../links/estilos/responsivo.css", caminhoComponentes);
+
+document.head.appendChild(cssResponsivo);
+
+
 // ==========================================
 // MENU HAMBÚRGUER
 // ==========================================
 
-function toggleMenu() {
+window.toggleMenu = function() {
 
     const menu = document.getElementById("menu");
 
@@ -257,4 +271,4 @@ function toggleMenu() {
     }
 
     menu.classList.toggle("menu-visivel");
-}
+};
