@@ -1,146 +1,156 @@
-@charset "UTF-8";
-
-/* =========================================
-   RESPONSIVIDADE GLOBAL DO SITE
-========================================= */
-
-@media (max-width: 1200px) {
-
-    /* =========================
-       CONFIGURAÇÕES GERAIS
-    ========================= */
-
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-        width: 100%;
-        height: 80px;
-        padding: 0 20px;
-    }
-
-    header h1 {
-    font-size: 16px;
-    text-align: center;
-    transform: translateX(30px);
-}
-
-    header .logo {
-        left: 15px;
-        font-size: 18px;
-    }
-
-    header nav {
-        right: 20px;
-    }
-
-    /* =========================
-       MENU HAMBÚRGUER
-    ========================= */
-
-    .hamburger {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        color: var(--cor-5);
-        font-size: 25px;
-}
-
-    #menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 35px;
-        right: 0;
-        width: 230px;
-        padding: 10px;
-        background-color: #ffffff;
-        border: 1px solid #eeeeee;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-        z-index: 9999;
-}
-
-    #menu.menu-visivel {
-        display: flex;
-    }
-
-    #menu li {
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-    }
-
-    #menu li a {
-        display: block;
-        width: 100%;
-        color: var(--cor-5);
-        padding: 10px;
-    }
-
-    #menu li:hover {
-        background-color: #f8e8f2;
-        color: var(--cor-1);
-        transform: none;
-        box-shadow: none;
-    }
-
-    /* =========================
-       IMAGENS
-    ========================= */
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* =========================
-       TEXTOS
-    ========================= */
-
-    h1 {
-        font-size: 1.3rem;
-    }
-
-    h2 {
-        font-size: 1.1rem;
-    }
-
-    h3 {
-        font-size: 0.9rem;
-    }
-
-    p {
-        font-size: 0.85rem;
-    }
-
-    /* =========================
-       RODAPÉ
-    ========================= */
-
-    footer {
-        width: 100%;
-        padding: 20px 10px;
-        font-size: 0.9rem;
-    }
-
-    footer a {
-        font-size: 0.85rem;
-        margin: 0 5px;
-    }
-
-    .call-to-action .btn {
-    position: relative;
-    top: -12px;
-}
-
-}
-
-
+@charset "UTF-8"; 
+ 
+/* ========================================= 
+   RESPONSIVIDADE GLOBAL DO SITE 
+========================================= */ 
+ 
+@media (max-width: 1200px) { 
+ 
+    /* ========================= 
+       CONFIGURAÇÕES GERAIS 
+    ========================= */ 
+ 
+    body { 
+        width: 100%; 
+        overflow-x: hidden; 
+    } 
+ 
+    /* ========================= 
+       IMAGENS 
+    ========================= */ 
+ 
+    img { 
+        max-width: 100%; 
+        height: auto; 
+    } 
+ 
+    /* ========================= 
+       TEXTOS 
+    ========================= */ 
+ 
+    h1 { 
+        font-size: 1.3rem; 
+    } 
+ 
+    h2 { 
+        font-size: 1.1rem; 
+    } 
+ 
+    h3 { 
+        font-size: 0.9rem; 
+    } 
+ 
+    p { 
+        font-size: 0.85rem; 
+    } 
+ 
+    /* ========================================= 
+       PÁGINA INICIAL 
+    ========================================= */ 
+ 
+    /* ========================= 
+       HEADER 
+    ========================= */ 
+ 
+    header { 
+        width: 100%; 
+        height: 80px; 
+        padding: 0 20px; 
+    } 
+ 
+    /* H1 */ 
+ 
+    header h1 { 
+        font-size: 16px; 
+        text-align: center; 
+        transform: translateX(30px); 
+    } 
+ 
+    /* LOGO */ 
+ 
+    header .logo { 
+        left: 15px; 
+        font-size: 18px; 
+    } 
+ 
+    /* MENU */ 
+ 
+    header nav { 
+        right: 20px; 
+    } 
+ 
+    /* MENU HAMBÚRGUER */ 
+ 
+    .hamburger { 
+        display: flex !important; 
+        justify-content: center; 
+        align-items: center; 
+        cursor: pointer; 
+        color: var(--cor-5); 
+        font-size: 25px; 
+    } 
+ 
+    #menu { 
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 35px; 
+        right: 0; 
+        width: 230px; 
+        padding: 10px; 
+        background-color: #ffffff; 
+        border: 1px solid #eeeeee; 
+        border-radius: 0 0 8px 8px; 
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); 
+        z-index: 9999; 
+    } 
+ 
+    #menu.menu-visivel { 
+        display: flex; 
+    } 
+ 
+    #menu li { 
+        width: 100%; 
+        margin: 0; 
+        padding: 10px; 
+    } 
+ 
+    #menu li a { 
+        display: block; 
+        width: 100%; 
+        color: var(--cor-5); 
+        padding: 10px; 
+    } 
+ 
+    #menu li:hover { 
+        background-color: #f8e8f2; 
+        color: var(--cor-1); 
+        transform: none; 
+        box-shadow: none; 
+    } 
+ 
+    /* ========================= 
+       NEWSLETTER 
+    ========================= */ 
+ 
+    .call-to-action .btn { 
+        position: relative; 
+        top: -12px; 
+    } 
+ 
+    /* ========================= 
+       RODAPÉ 
+    ========================= */ 
+ 
+    footer { 
+        width: 100%; 
+        padding: 20px 10px; 
+        font-size: 0.9rem; 
+    } 
+ 
+    footer a { 
+        font-size: 0.85rem; 
+        margin: 0 5px; 
+    } 
+ 
+} 
