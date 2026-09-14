@@ -68,7 +68,7 @@
     } 
 
     .pagina-inicial header h1 {
-    font-size: 16px;
+    font-size: 20px;
 }
  
     /* LOGO */ 
@@ -279,5 +279,86 @@
 
     #btn-finalizar {
         width: 100%;
+    }
+
+        /* =========================================
+       PÁGINAS DOS KITS
+    ========================================= */
+
+    .titulo {
+        width: 90%;
+        max-width: 500px;
+        min-height: auto;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .titulo img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .titulo h3 {
+        font-size: 1.2rem;
+    }
+
+    .titulo > p {
+        font-size: 14px;
+    }
+
+    .titulo > p.preco-kit {
+        font-size: 1.8rem;
+    }
+
+    .kit-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        gap: 20px;
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 650px;
+        margin: 0 auto;
+    }
+
+    .item img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .item h3 {
+        font-size: 1.2rem;
+    }
+
+    .item p {
+        font-size: 0.9rem;
+    }
+
+    .kit-2 header h1 {
+    font-size: 19px;
+    transform: translateX(45px);
+
+   }
+
+   .minhas-compras header h1 {
+    font-size: 22px;
+    
+    }
+
+    .opcoes-pagamento header h1 {
+     font-size: 19px;
+    transform: translateX(45px);
+
     }
 } 
