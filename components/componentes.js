@@ -1,8 +1,24 @@
-/// ==========================================
-// HEADER
+
+// ==========================================
+// FAVICON
 // ==========================================
 
 const caminhoComponentes = new URL(".", import.meta.url);
+
+const favicon = document.createElement("link");
+
+favicon.rel = "icon";
+favicon.type = "image/x-icon";
+favicon.href = new URL("../favicon.ico.png", caminhoComponentes);
+
+document.head.appendChild(favicon);
+
+console.log("FAVICON:", favicon.href);
+
+
+/// ==========================================
+// HEADER
+// ==========================================
 
 fetch(new URL("header.html", caminhoComponentes))
     .then(resposta => resposta.text())
