@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
 
-            const resposta = await fetch("http://localhost:3000/newsletter", {
+            const resposta = await fetch("https://arsn-loja.onrender.com/newsletter", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

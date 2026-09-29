@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
 
             const resposta = await fetch(
-                `http://localhost:3000/carrinho/${usuario.id}`
+                `https://arsn-loja.onrender.com/carrinho/${usuario.id}`
             );
 
 

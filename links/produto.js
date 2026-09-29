@@ -6,7 +6,7 @@ const parametros = new URLSearchParams(window.location.search);
 const id = parametros.get("id");
 
 // Busca o produto no backend usando o ID
-fetch(`http://localhost:3000/produtos/${id}`)
+fetch(`https://arsn-loja.onrender.com/produtos/${id}`)
     .then(resposta => resposta.json())
 
     // Recebe os dados do produto
@@ -109,7 +109,7 @@ fetch(`http://localhost:3000/produtos/${id}`)
                 try {
 
                     const resposta = await fetch(
-                        "http://localhost:3000/carrinho",
+                        "https://arsn-loja.onrender.com/carrinho",
                         {
                             method: "POST",
 

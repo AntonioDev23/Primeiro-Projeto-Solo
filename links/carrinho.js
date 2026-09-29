@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
 
             const resposta = await fetch(
-                `http://localhost:3000/carrinho/${usuario.id}`
+                `https://arsn-loja.onrender.com/carrinho/${usuario.id}`
             );
 
             if (!resposta.ok) {
@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
 
             const resposta = await fetch(
-                `http://localhost:3000/carrinho/item/${itemId}`,
+                `https://arsn-loja.onrender.com/carrinho/item/${itemId}`,
                 {
                     method: "PUT",
 
@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
 
             const resposta = await fetch(
-                `http://localhost:3000/carrinho/item/${itemId}`,
+                `https://arsn-loja.onrender.com/carrinho/item/${itemId}`,
                 {
                     method: "DELETE"
                 }

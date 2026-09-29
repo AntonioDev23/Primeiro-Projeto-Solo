@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
 
             const resposta = await fetch(
-                "http://localhost:3000/usuarios/perfil",
+                "https://arsn-loja.onrender.com/usuarios/perfil",
                 {
                     method: "PUT",
 
@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
 
             const resposta = await fetch(
-                "http://localhost:3000/usuarios/senha",
+                "https://arsn-loja.onrender.com/usuarios/senha",
                 {
                     method: "PUT",
 

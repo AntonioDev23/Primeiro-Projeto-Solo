@@ -12,7 +12,7 @@ formulario.addEventListener("submit", async (evento) => {
     const genero = document.getElementById("genero").value;
 
     try {
-        const resposta = await fetch("http://localhost:3000/usuarios", {
+        const resposta = await fetch("https://arsn-loja.onrender.com/usuarios", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

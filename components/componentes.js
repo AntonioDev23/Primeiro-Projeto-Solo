@@ -106,7 +106,7 @@ fetch(new URL("header.html", caminhoComponentes))
                     try {
 
                         const resposta = await fetch(
-                            `http://localhost:3000/carrinho/${usuarioLogado.id}`
+                            `https://arsn-loja.onrender.com/carrinho/${usuarioLogado.id}`
                         );
 
                         if (!resposta.ok) {

@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/produtos")
+fetch("https://arsn-loja.onrender.com/produtos")
     .then(resposta => {
 
         if (!resposta.ok) {
